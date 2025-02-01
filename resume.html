@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<title>Resume</title>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/Site/stylesheet.css"></head>
+  <body>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script>
+    <div class="nav">
+      <a class="nav-button" href="index.html" title="Home"> Home</a>
+      <a class="nav-button" href="about.html" title="About Me">About Me</a>
+      <a class="nav-button" href="projects.html" title="Projects">Projects</a>
+      <a class="nav-button" href="resume.html" title="Resume">Resume</a>
+      <a class="nav-button" href="contact.html" title="Contact">Contact</a>
+    </div>
+    <p>Resume</p>
+  </body>
+<!--Made By: Joseph Groom-->
+</html>
