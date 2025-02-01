@@ -5,24 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Joseph Groom's Personal Website - USF Biomedical Engineering Student">
     <title>Home - Joseph Groom</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
+    <link rel="icon" href="/assets/Icon.png">
   </head>
   <body>
-    <script> 
-      window.onscroll = function() {myFunction()};
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
-    <!-- Sticky Navbar -->
     <div class="nav" id="navbar">
       <a class="nav-button" href="index.html" title="Home">Home</a>
       <a class="nav-button" href="about.html" title="About Me">About Me</a>
@@ -40,10 +26,10 @@
           <img src="/path/to/your-image.jpg" alt="Joseph Groom" width="200" height="200">
         </div>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/joseph-groom" target="_blank">
+          <a href="www.linkedin.com/in/joseph-groom-bme" target="_blank">
             <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
           </a>
-          <a href="https://github.com/joseph-groom" target="_blank">
+          <a href="https://github.com/Oupobopoc-C6H6" target="_blank">
             <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub Badge">
           </a>
         </div>
@@ -52,8 +38,25 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-      <p>Contact: <a href="mailto:joseph.groom@email.com">joseph.groom@email.com</a></p>
+      <p>School: <a href="mailto:groom1@usf.edu">groom1@usf.edu</a></p>
+      <p>Private: <a href="mailto:joseph.groom@email.com">joseph.groom@email.com</a></p>
     </footer>
+    
+    <!-- Sticky Navbar -->
+    <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 <!--Made By: Joseph Groom-->
 </html>
