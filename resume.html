@@ -1,31 +1,89 @@
-<!doctype html>
-<html>
-<title>Resume</title>
-  <head>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"></head>
-  <body>
-    <script>
-        window.onscroll = function() {myFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-        }
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume of Joseph Groom - Biomedical Engineering Student">
+    <title>Resume - Joseph Groom</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
     <div class="nav">
-      <a class="nav-button" href="index.html" title="Home"> Home</a>
-      <a class="nav-button" href="about.html" title="About Me">About Me</a>
-      <a class="nav-button" href="projects.html" title="Projects">Projects</a>
-      <a class="nav-button" href="resume.html" title="Resume">Resume</a>
-      <a class="nav-button" href="contact.html" title="Contact">Contact</a>
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="about.html">About Me</a>
+        <a class="nav-button" href="projects.html">Projects</a>
+        <a class="nav-button" href="resume.html">Resume</a>
+        <a class="nav-button" href="contact.html">Contact</a>
     </div>
-    <p>Resume</p>
-  </body>
-<!--Made By: Joseph Groom-->
+
+    <!-- Resume Section -->
+    <section class="resume">
+        <div class="container">
+            <h1>Resume</h1>
+            
+            <!-- Education Section -->
+            <h2>Education</h2>
+            <p><strong>Bachelor of Science in Biomedical Engineering</strong><br>
+               University of South Florida, Tampa, FL<br>
+               Expected Graduation: 2026</p>
+
+            <!-- Skills Section -->
+            <h2>Skills</h2>
+            <ul>
+                <li>Software: MATLAB, C++, LTspice, Java, HTML/CSS</li>
+                <li>Certifications: MATLAB, C++, Microsoft Office (Excel, Publisher)</li>
+                <li>Laboratory: Safe Lab Management</li>
+            </ul>
+
+            <!-- Experience Section -->
+            <h2>Biomedical Engineering Experience</h2>
+
+            <h3>Undergraduate Research Assistant, USF TTEB Lab</h3>
+            <p><em>Translational Tissue Engineering and Biofabrication Laboratory</em> (2024 - Present)</p>
+            <ul>
+                <li>Working with electrospinning polymers to create nanofiber sheets and test mechanical properties.</li>
+                <li>Researching heart-valve tissue engineering, biomaterials, and biomechanics.</li>
+            </ul>
+
+            <h3>ECG Signal Processing & Filtering</h3>
+            <p><em>Engineering Project (2023 - 2024)</em></p>
+            <ul>
+                <li>Developed a MATLAB-based pipeline to isolate ECG waveform components.</li>
+                <li>Applied mathematical modeling and filtering techniques to improve biomedical data analysis.</li>
+            </ul>
+
+            <h3>Pulse Oximeter Noise Filtration</h3>
+            <p><em>Engineering Project (2024)</em></p>
+            <ul>
+                <li>Designed and simulated a signal filtration system in LTspice.</li>
+                <li>Used MATLAB for real-time data acquisition and signal processing.</li>
+            </ul>
+
+            <h3>Gru-mobile, Software/Hardware Lead</h3>
+            <p><em>Engineering Project (2022)</em></p>
+            <ul>
+                <li>Programmed an ATmega328P microcontroller for automated movement using IR and ultrasonic sensors.</li>
+                <li>Managed communication between project team leads over 15 weeks.</li>
+            </ul>
+
+            <!-- Affiliations -->
+            <h2>Affiliations & Leadership</h2>
+            <ul>
+                <li>Member, Engineers Without Borders (2022 - Present)</li>
+            </ul>
+
+            <!-- Download Resume Button -->
+            <p><strong>Download Resume:</strong></p>
+            <a href="assets/joseph-groom-resume.pdf" download="Joseph-Groom-Resume.pdf">
+                <button>Download Resume (PDF)</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Joseph Groom | <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a></p>
+    </footer>
+</body>
 </html>
