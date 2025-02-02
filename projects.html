@@ -6,6 +6,7 @@
     <meta name="description" content="Explore the projects I have worked on in Biomedical Engineering, showcasing my skills in medical technology and design.">
     <title>Projects - Joseph Groom</title>
     <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css">
+    <link rel="icon" href="/assets/Icon.png">
   </head>
   <body>
     <!-- Sticky Navbar -->
@@ -17,43 +18,50 @@
       <a class="nav-button" href="contact.html" title="Contact">Contact</a>
     </div>
 
-    <!-- Projects Section 
-    <section class="projects">
+    <!-- Main Content -->
+    <div class="container">
       <h1>Projects</h1>
-      <p>Below are some of the projects I’ve worked on during my studies as a Biomedical Engineering student:</p>
-      
-      <div class="project-item">
-        <h2>Project 1: [Project Name]</h2>
-        <p>Description of the project, technologies used, and your role. You could include any relevant links to GitHub or documents.</p>
-      </div>
 
-      <div class="project-item">
-        <h2>Project 2: [Project Name]</h2>
-        <p>Description of the project, technologies used, and your role. You could include any relevant links to GitHub or documents.</p>
-      </div>
+      <!-- Project 1: Gru-mobile -->
+      <section class="project">
+          <img src="assets/images/gru-mobile.jpg" alt="Gru-mobile Project" class="project-img">
+          <div class="project-info">
+              <h2>Gru-mobile: Autonomous Toy Development</h2>
+              <p><strong>Skills:</strong> Embedded Systems, Microcontrollers, C Programming, 3D Printing, Team Leadership</p>
+              <p>Designed a marketable children's toy with an ATmega328P microcontroller for real-time motion tracking using infrared and ultrasonic sensors.</p>
+              <a href="projects/gru-mobile.html" class="read-more-btn">Read More</a>
+          </div>
+      </section>
 
-      Add more projects as necessary -->
-    </section>
+      <!-- Project 2: Pulse Oximeter Noise Filtration -->
+      <section class="project">
+          <img src="assets/images/pulse-oximeter.jpg" alt="Pulse Oximeter Project" class="project-img">
+          <div class="project-info">
+              <h2>Pulse Oximeter Noise Filtration</h2>
+              <p><strong>Skills:</strong> LTspice, MATLAB, Circuit Design, Signal Processing</p>
+              <p>Designed and simulated a signal filtration system for LED-based pulse oximeters, optimizing signal clarity for accurate readings.</p>
+              <a href="projects/pulse-oximeter.html" class="read-more-btn">Read More</a>
+          </div>
+      </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <p>Contact: <a href="mailto:joseph.groom@email.com">joseph.groom@email.com</a></p>
+      <!-- Project 3: ECG Signal Processing -->
+      <section class="project">
+          <img src="assets/images/ecg-signal.jpg" alt="ECG Signal Processing Project" class="project-img">
+          <div class="project-info">
+              <h2>ECG Signal Processing & Filtering</h2>
+              <p><strong>Skills:</strong> MATLAB, Digital Signal Processing, Biomedical Data Analysis</p>
+              <p>Developed a MATLAB pipeline to isolate ECG waveform components and improve biomedical signal analysis.</p>
+              <a href="projects/ecg-signal.html" class="read-more-btn">Read More</a>
+          </div>
+      </section>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Joseph Groom | 
+      <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a></p>
     </footer>
 
-    <!-- Sticky Navbar Script -->
-    <script>
-      window.onscroll = function() {myFunction()};
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
   </body>
 </html>
