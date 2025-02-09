@@ -15,7 +15,7 @@ body {
 }
 
 /* Navigation Styles */
-.nav {
+nav {
   background-color: #333;
   width: 100%;
   overflow: hidden;
@@ -48,7 +48,7 @@ body {
 }
 
 /* Page Content Styles */
-.container {
+main { /*container*/
   width: 90%;
   max-width: 1200px;
   margin: 0 auto; /* Centers the content */
