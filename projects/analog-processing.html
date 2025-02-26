@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about the Gru-mobile project by Joseph Groom">
+    <title>Analog Signal Processing - Joseph Groom</title>
+    <link rel="stylesheet" href="../assets/stylesheet.css">
+    <link rel="icon" href="../assets/Icon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a class="nav-button" href="../index.html">Home</a>
+        <a class="nav-button" href="../about.html">About Me</a>
+        <a class="nav-button" href="../projects.html">Projects</a>
+        <a class="nav-button" href="../resume.html">Resume</a>
+        <a class="nav-button" href="../contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Analog Signal Processing: Pulse Oximetry</h1>
+        <p><strong>Project Focus:</strong> Reducing noise in pulse oximetry signals to improve SpO₂ measurement accuracy.</p>
+        <p>Fall 2024, Medical instrumentation</p>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <h2>Project Overview</h2>
+            <p>
+                The goal of Pulse Oximetery was to develop a cost-effective, analog signal processing circuit that reduces noise in pulse oximeter signals 
+                while preserving critical physiological data. Starting from a basic pulse oximeter design using a red LED and a photoresistor to capture raw data, 
+                I focused on mitigating common noise sources—such as motion artifacts, ambient light, and electronic interference—without filtering out biologically significant changes.
+            </p>
+            <p>
+                To achieve this, I designed and simulated a second-order low-pass filter using inexpensive RC components and operational amplifiers in LTspice. 
+                This analog approach allowed for effective attenuation of high-frequency noise while maintaining the integrity of the low-frequency heartbeat. 
+                The iterative process—balancing performance with component cost—resulted in a circuit that reliably amplifies the desired signal within the constraints of a tight budget.
+            </p>
+            <p>
+                Ultimately, this project showcases my expertise in analog circuit design and biomedical signal processing, 
+                demonstrating how a carefully engineered analog filter can improve the accuracy of non-invasive blood oxygen monitoring.
+            </p>
+        </section>
+
+        <!-- Understanding the Noise Problem -->
+        <section class="noise-problem">
+            <h2>Understanding the Noise Problem</h2>
+            <ul>
+                <li><strong>Motion Artifacts:</strong> Sudden hand movements can distort SpO₂ readings.</li>
+                <li><strong>Ambient Light Interference:</strong> External light sources can introduce unwanted variations in signal detection.</li>
+                <li><strong>Electronic Noise:</strong> Internal circuit noise can create fluctuations in sensor output.</li>
+            </ul>
+            <p>These noise sources often lead to incorrect oxygen saturation readings, affecting the reliability of pulse oximeters.</p>
+        </section>
+
+        <!-- Engineering Approach -->
+        <section class="Design">
+            <h2>Design</h2>
+            <p>
+                To combat noise, I employed hardware filtering combining passive and active circuits to refine pulse oximeter output.
+            </p>
+            <h3>Hardware-Based Passive Filtering</h3>
+            <p>Implemented two low-pass RC filters forming a second order filter to attenuate high-frequency noise while preserving key pulse data.</p>
+            <h3>Hardware-Based Active Amplification</h3>
+            <p>Implemented two non-inverting operational amplifiers to increase signal strength from milivolts up to volts, and to maintain a max and min of +/- 10V.</p>
+        </section>
+
+        <!-- Testing & Results -->
+        <section class="testing-results">
+            <h2>Testing & Results</h2>
+            <p>
+                To validate the effectiveness of my filtering approach, I processed real and simulated pulse oximeter signals.
+            </p>
+            <h3>Key Findings:</h3>
+            <ul>
+                <li>Filtered signals showed a clearer heart rate waveform with improved SpO₂ accuracy.</li>
+                <li>FFT analysis demonstrated reduced high-frequency noise components.</li>
+            </ul>
+            <p>
+                The improvements were visualized through before-and-after plots, highlighting enhanced signal clarity.
+            </p>
+            <!-- Placeholder for an image -->
+            <div class="image-container">
+                <div class="image-box">
+                    <h3>Before Filtering</h3>
+                    <img src="project_assets/before.jpg" alt="Raw Signal">
+                </div>
+                <div class="image-box">
+                    <h3>After Filtering</h3>
+                    <img src="project_assets/after.jpg" alt="Filtered Signal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                This project successfully demonstrated that noise filtration techniques can significantly enhance pulse oximeter accuracy. 
+                By applying a combination of hardware and digital signal processing methods, I improved signal quality, making SpO₂ 
+                measurements more reliable. Future iterations could integrate advanced filtering algorithms and machine learning models 
+                to further refine real-time noise reduction.
+            </p>
+        </section>
+
+        <!-- Back to Projects Button -->
+        <a href="../projects.html" class="back-button">← Back to Projects</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Joseph Groom | 
+            <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
