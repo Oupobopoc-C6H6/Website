@@ -162,6 +162,27 @@ footer a:hover {
   background-color: #005bb5;
 }
 
+/* Pictures For porject more info pages*/
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between images */
+  flex-wrap: wrap; /* Ensures images stack on small screens */
+}
+
+.image-box {
+  text-align: center;
+  max-width: 45%;
+}
+
+.image-box img {
+  width: 100%; /* Makes images responsive */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   main {
