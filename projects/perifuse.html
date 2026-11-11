@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171a1d">
+<meta name="description" content="PERIFUSE — Joseph A. Groom's senior engineering capstone developing a wearable immune cell delivery device with custom PCB, embedded firmware, low-power electronics and biological testing.">
+<title>PERIFUSE | Joseph A. Groom</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<link rel="icon" href="../assets/Icon.png">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-brand" href="../index.html"><span class="brand-mark" aria-hidden="true">//</span> Joseph A. Groom</a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a><a href="../about.html">About</a>
+    <a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a>
+  </div>
+</nav>
+<main class="perifuse-main">
+  <p class="eyebrow">SENIOR DESIGN CAPSTONE · UNIVERSITY OF SOUTH FLORIDA</p>
+  <h1>PERIFUSE</h1>
+  <p class="hero-role">A wearable platform for localized immune cell delivery</p>
+  <p class="perifuse-intro">Developed as a biomedical engineering capstone in collaboration with Moffitt Cancer Center, PERIFUSE explores the controlled delivery of immune cells through a compact, wearable, battery-powered device. My work brought together embedded electronics, custom PCB development, firmware, enclosure design, device integration, and experimental testing.</p>
+  <div class="tag-row"><span>ATtiny1616</span><span>KiCad</span><span>Embedded C</span><span>Power Management</span><span>Piezoelectric Pump</span><span>SolidWorks</span><span>Cell Viability Testing</span></div>
+  <div class="perifuse-stats">
+    <div class="perifuse-stat"><strong>17 × 12 mm</strong><span>Custom controller PCB footprint</span></div>
+    <div class="perifuse-stat"><strong>150 mAh</strong><span>Li-ion battery capacity used in device design</span></div>
+    <div class="perifuse-stat"><strong>≥80%</strong><span>Cell viability design target over 3 days — not a verified outcome</span></div>
+  </div>
+  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> The design targets below are engineering requirements rather than claims of clinical readiness or demonstrated efficacy.</p>
+  <nav class="perifuse-toc" aria-label="Sections of this project">
+    <a href="#challenge">Design challenge</a><a href="#electronics">Electronics</a><a href="#firmware">Firmware</a><a href="#mechanical">Mechanical design</a><a href="#testing">Testing</a><a href="#resources">Resources</a>
+  </nav>
+  <section id="challenge" class="perifuse-section">
+    <h2>Engineering Challenge</h2>
+    <p>The project explored whether immune cells could be stored and delivered in small, scheduled doses using a portable, body-mounted system. Challenges included maintaining cell viability, controlling microfluidic delivery, minimizing device size and power demand, and selecting materials compatible with cell handling.</p>
+    <div class="perifuse-grid">
+      <div class="perifuse-panel"><h3>Core requirements</h3><ul><li>Three-day cell storage and dosing concept</li><li>At least 80% cell viability target</li><li>Accurate, low-volume scheduled delivery</li><li>Wearable form factor and secure attachment</li><li>Cost, sterility, and material compatibility constraints</li></ul></div>
+      <div class="perifuse-panel"><h3>My technical contributions</h3><ul><li>Microcontroller selection, PCB design, and power architecture</li><li>Embedded C firmware for low-duty-cycle dosing</li><li>Integration of pump, battery, and electromechanical components</li><li>Iterative housing and mechanical design</li><li>System testing and design tradeoff evaluation</li></ul></div>
+    </div>
+  </section>
+  <section id="electronics" class="perifuse-section">
+    <h2>Embedded Electronics &amp; PCB Development</h2>
+    <p>I developed a compact <strong>17 × 12 mm custom PCB</strong> built around the <strong>ATtiny1616</strong> microcontroller. The system used a 150 mAh single-cell Li-ion battery, a regulated 5 V supply for the piezoelectric pump, and a MOSFET switching stage. Component selection and board layout balanced size, electrical requirements, manufacturability, and low standby power.</p>
+    <div class="perifuse-panel"><h3>Design evidence to add</h3><p>Use one KiCad 3D render or PCB photograph, followed by an annotated schematic/PCB layout showing the microcontroller, boost converter, pump switch, battery connection, and programming interface. Include a curated BOM and a link to a sanitized KiCad source repository once the files are ready for release.</p></div>
+  </section>
+  <section id="firmware" class="perifuse-section">
+    <h2>Embedded Firmware &amp; Power Management</h2>
+    <p>Firmware was written in embedded C for the ATtiny1616, using its low-frequency real-time counter to schedule pump operation while placing the controller into a low-power sleep state between events. The design uses short active pump intervals separated by long idle periods, reflecting the project's intermittent dosing requirements.</p>
+    <div class="perifuse-panel"><h3>Show the reasoning, not only the source code</h3><p>A timer/sleep/pump state diagram and a measured power-consumption trace would explain the design more clearly than a large code listing. The source code can be supplied separately with build instructions and comments once prepared for public release.</p></div>
+  </section>
+  <section id="mechanical" class="perifuse-section">
+    <h2>Mechanical &amp; Fluidic Integration</h2>
+    <p>Multiple enclosure and chamber prototypes explored component fit, tubing routing, adhesive stability, and fabrication constraints. The fluid path combined a cell chamber with pump-driven delivery, while experiments considered oxygen exchange through a thin PDMS membrane and potential flow restrictions in the system.</p>
+    <p>Later iterations incorporated design-for-manufacturing considerations and revisions prompted by comfort feedback, material compatibility observations, and pump/fluid-path issues.</p>
+    <div class="perifuse-panel"><h3>Recommended visual</h3><p>A three-image prototype evolution: early breadboard assembly → integrated housing → final CAD/exploded assembly. This would make the engineering iteration visible without posting every CAD revision.</p></div>
+  </section>
+  <section id="testing" class="perifuse-section">
+    <h2>Testing, Challenges &amp; Lessons Learned</h2>
+    <div class="perifuse-grid">
+      <div class="perifuse-panel"><h3>Cell handling &amp; viability</h3><p>Cell-handling studies included viability/counting methods and consideration of oxygen availability, temperature, and material interactions. Live/dead images can illustrate the experimental method; quantified outcomes should be shown only with their corresponding data, controls, and time points.</p></div>
+      <div class="perifuse-panel"><h3>Flow &amp; dosing</h3><p>Pump characterization examined short pumping intervals and the delivered fluid volumes. A calibration curve and a table of target versus measured volume would help substantiate dosing performance.</p></div>
+      <div class="perifuse-panel"><h3>Electrical &amp; thermal performance</h3><p>Power measurements and multi-channel temperature logging informed battery-life expectations and cell-storage conditions. An oscilloscope or current trace and a temperature time-series plot would provide strong evidence.</p></div>
+      <div class="perifuse-panel"><h3>Iterative problem solving</h3><p>Important engineering obstacles included resin cytotoxicity concerns, adhesive stability, fluid-path vacuum lock, pump reliability, and real-time-counter configuration. These tradeoffs are part of the project's engineering story, not details to omit.</p></div>
+    </div>
+  </section>
+  <section id="resources" class="perifuse-section">
+    <h2>Supporting Materials</h2>
+    <p>The technical artifacts below are available from the project work but are <strong>not yet linked here</strong>. Selected public versions can be added after the material is organized and any sponsor or team-sharing restrictions have been checked.</p>
+    <ul class="perifuse-roadmap">
+      <li><strong>Project presentation:</strong> 40-minute design walkthrough; ideally include chapter timestamps and a short summary.</li>
+      <li><strong>University poster:</strong> A concise overview of requirements, implementation, and experimental work.</li>
+      <li><strong>Electronics:</strong> KiCad project, selected Gerbers, assembly images, and curated BOM.</li>
+      <li><strong>Firmware:</strong> Embedded C source with a README explaining target MCU, toolchain, and scheduling architecture.</li>
+      <li><strong>Mechanical:</strong> CAD renders and selected prototype iterations; share neutral STEP exports where appropriate.</li>
+      <li><strong>Validation:</strong> Annotated flow, power, temperature, and cell-viability figures with relevant methods and limitations.</li>
+    </ul>
+    <p>For implementation discussions or additional project documentation, <a href="../contact.html">get in touch</a>.</p>
+  </section>
+  <p><a class="back-button" href="../projects.html">← Back to Projects</a></p>
+</main>
+<footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
+</body>
+</html>
