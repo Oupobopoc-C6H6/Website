@@ -127,3 +127,39 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* PERIFUSE flagship feature: uses editable HTML rather than an unverified photograph. */
+.capstone-spotlight { display:grid; grid-template-columns: 1.15fr .85fr; gap: 1.5rem; padding: clamp(24px,3.5vw,44px); margin-bottom: 24px; background: linear-gradient(130deg,#222b2f 0%,#1d2227 60%,#161a1e 100%); border: 1px solid #766044; border-left: 4px solid var(--accent); border-radius: var(--radius); }
+.capstone-spotlight-copy h3 {font-size: clamp(2.4rem,4vw,3.5rem);margin:.25rem 0;}
+.capstone-subtitle {font-size:1.15rem;font-weight:650;color:var(--text);}
+.capstone-spotlight-copy > p:not(.project-category) {max-width:58ch;}
+.capstone-spotlight .tag-row {margin:1.3rem 0;}
+.capstone-spotlight-visual {display:flex;align-items:center;}
+.system-diagram {width:100%;padding:24px 18px;background:radial-gradient(circle at 50% 0%,#303b40 0%,#13191d 78%);border:1px solid #53606a;border-radius:12px;text-align:center;}
+.diagram-label {font-size:.72rem;letter-spacing:.2em;color:var(--accent);font-weight:750;margin-bottom:22px;}
+.diagram-nodes {display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.diagram-nodes span {display:flex;align-items:center;justify-content:center;min-height:90px;padding:10px 4px;border:1px solid #8a744f;border-radius:7px;background:#222a30;color:var(--text);font-size:.8rem;line-height:1.35;font-weight:650;}
+.diagram-connectors {letter-spacing:2.5rem;color:var(--accent);font-size:1.2rem;height:10px;overflow:hidden;}
+.system-diagram p {font-size:.77rem;color:var(--muted);margin:17px 0 0;}
+.project-flagship {border-left:4px solid var(--accent);align-items:center;}
+.project-flagship-graphic {display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;flex:0 0 min(32%,270px);align-self:stretch;min-height:210px;border:1px solid #615b4e;border-radius:8px;background:radial-gradient(circle at 55% 40%,#344046,#172025 74%);color:var(--accent);text-align:center;font-size:.65rem;letter-spacing:.14em;padding:14px;}
+.project-flagship-initials {font-size:6rem;line-height:1;font-weight:800;letter-spacing:-.1em;}
+.perifuse-main {max-width:1120px;}
+.perifuse-intro {font-size:1.07rem;color:var(--muted);max-width:76ch;}
+.perifuse-stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:28px 0;}
+.perifuse-stat {background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:8px;padding:18px;}
+.perifuse-stat strong {font-size:1.2rem;color:var(--accent);display:block;}
+.perifuse-stat span {font-size:.83rem;color:var(--muted);}
+.perifuse-toc {display:flex;gap:8px;flex-wrap:wrap;margin:24px 0;}
+.perifuse-toc a {text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:6px;background:var(--panel);font-size:.85rem;}
+.perifuse-section {padding-top:18px;margin-top:24px;border-top:1px solid var(--border);}
+.perifuse-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.perifuse-panel {border:1px solid var(--border);border-radius:8px;background:var(--panel);padding:22px;}
+.perifuse-panel h3 {margin-bottom:10px;}
+.perifuse-panel p:last-child {margin:0;}
+.perifuse-maturity {padding:14px 18px;background:#202b2b;border-left:3px solid var(--accent);border-radius:5px;color:var(--text);margin:24px 0;}
+.perifuse-roadmap {margin-bottom:18px;}
+.perifuse-roadmap li {margin-bottom:10px!important;}
+@media(max-width:800px){.capstone-spotlight{grid-template-columns:1fr;}.perifuse-stats{grid-template-columns:1fr 1fr;}.perifuse-grid{grid-template-columns:1fr;}}
+@media(max-width:680px){.project-flagship-graphic{width:100%;flex-basis:auto;min-height:145px;}.project-flagship-initials{font-size:3.5rem;}.perifuse-stats{grid-template-columns:1fr;}.diagram-nodes span{font-size:.69rem;min-height:74px;}}
