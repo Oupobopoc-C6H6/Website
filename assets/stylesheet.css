@@ -163,3 +163,20 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
 .perifuse-roadmap li {margin-bottom:10px!important;}
 @media(max-width:800px){.capstone-spotlight{grid-template-columns:1fr;}.perifuse-stats{grid-template-columns:1fr 1fr;}.perifuse-grid{grid-template-columns:1fr;}}
 @media(max-width:680px){.project-flagship-graphic{width:100%;flex-basis:auto;min-height:145px;}.project-flagship-initials{font-size:3.5rem;}.perifuse-stats{grid-template-columns:1fr;}.diagram-nodes span{font-size:.69rem;min-height:74px;}}
+
+/* PERIFUSE image-first case study */
+.capstone-photo {display:flex;position:relative;overflow:hidden;min-height:265px;border-radius:11px;border:1px solid var(--border);background:#121719;text-decoration:none;}
+.capstone-photo img {display:block;width:100%;height:100%;object-fit:cover;min-height:265px;transition:transform .25s ease;}
+.capstone-photo:hover img {transform:scale(1.035);}
+.capstone-photo::after {content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.82));pointer-events:none;}
+.capstone-photo span {position:absolute;bottom:16px;left:19px;right:15px;z-index:1;font-size:.86rem;font-weight:700;color:#fff;}
+.case-hero-image {margin:22px 0 28px;overflow:hidden;border:1px solid var(--border);border-radius:10px;background:#15191d;}
+.case-hero-image img {width:100%;max-height:460px;object-fit:contain;}
+.case-hero-image figcaption {padding:10px 16px;font-size:.85rem;color:var(--muted);}
+.case-gallery {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0 28px;}
+.case-figure {margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--panel);}
+.case-figure a {display:block;background:#151a1f;}
+.case-figure img {display:block;width:100%;height:255px;object-fit:contain;}
+.case-figure figcaption {padding:10px 14px;color:var(--muted);font-size:.88rem;line-height:1.5;}
+.case-download {margin:18px 0;}
+@media(max-width:680px){.case-gallery{grid-template-columns:1fr;}.case-figure img{height:auto;max-height:320px;}}
