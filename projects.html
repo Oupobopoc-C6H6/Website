@@ -3,28 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the projects I have worked on in Biomedical Engineering, showcasing my skills in medical technology and design.">
-    <title>Projects - Joseph Groom</title>
+    <meta name="theme-color" content="#171a1d">
+    <meta name="description" content="Explore Joseph A. Groom’s engineering projects involving microcontrollers, electronics, biomedical instrumentation, and signal processing.">
+    <title>Projects | Joseph A. Groom</title>
     <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
-    <link rel="icon" href="/assets/Icon.png">
+    <link rel="icon" href="assets/Icon.png">
   </head>
   <body>
     <!-- Sticky Navbar -->
-    <nav>
-      <a class="nav-button" href="index.html" title="Home">Home</a>
-      <a class="nav-button" href="about.html" title="About Me">About Me</a>
-      <a class="nav-button" href="projects.html" title="Projects">Projects</a>
-      <a class="nav-button" href="resume.html" title="Resume">Resume</a>
-      <a class="nav-button" href="contact.html" title="Contact">Contact</a>
-    </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="index.html"><span class="brand-mark" aria-hidden="true">//</span> Joseph A. Groom</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
     <!-- Main Content -->
     <main class="projects">
       <h1>Projects</h1>
 
+      <!-- Featured senior capstone project -->
+      <section class="project project-flagship">
+          <img class="project-img" src="assets/projects/perifuse/printed-design.jpg" alt="PERIFUSE printed device prototype" loading="lazy">
+          <div class="project-info">
+              <p class="project-category">FEATURED · SENIOR CAPSTONE · MOFFITT CANCER CENTER</p>
+              <h2>PERIFUSE: Localized Immune Cell Delivery</h2>
+              <p><strong>Skills:</strong> Embedded C, KiCad, Custom PCB Design, Low-Power Electronics, CAD, Microfluidics, Experimental Testing</p>
+              <p>Designed and prototyped a wearable programmable cell-delivery system, integrating a custom ATtiny1616 controller, battery-powered pump electronics, a compact enclosure, and cell-handling studies.</p>
+              <a href="projects/perifuse.html" class="read-more-btn">Explore PERIFUSE →</a>
+          </div>
+      </section>
       <!-- Project 1: Gru-mobile -->
       <section class="project">
-          <img src="assets/images/gru-mobile.jpg" alt="Gru-mobile Project" class="project-img">
+          <img src="assets/projects/gru-mobile/cover.jpg" alt="Gru-mobile Project" class="project-img">
           <div class="project-info">
               <h2>Gru-mobile: Autonomous Toy Development</h2>
               <p><strong>Skills:</strong> Embedded Systems, Microcontrollers, C Programming, 3D Printing, Team Leadership</p>
@@ -35,7 +50,7 @@
 
       <!-- Project 2: Pulse Oximeter Noise Filtration -->
       <section class="project">
-          <img src="assets/images/pulse-oximeter.jpg" alt="Pulse Oximeter Project" class="project-img">
+          <img src="assets/projects/analog-processing/cover.jpg" alt="Pulse Oximeter Project" class="project-img">
           <div class="project-info">
               <h2>Analog Signal Processing: Pulse Oximeter</h2>
               <p><strong>Skills:</strong> LTspice, MATLAB, Circuit Design, Signal Processing</p>
@@ -46,7 +61,7 @@
 
       <!-- Project 3: Ventricle Flow Signal Processing -->
       <section class="project">
-          <img src="assets/images/digital-processing.jpg" alt="ECG Signal Processing Project" class="project-img">
+          <img src="assets/projects/digital-processing/cover.jpg" alt="ECG Signal Processing Project" class="project-img">
           <div class="project-info">
               <h2>Digital Signal Processing & Filtering</h2>
               <p><strong>Skills:</strong> MATLAB, Digital Signal Processing, Biomedical Data Analysis</p>
@@ -57,11 +72,7 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <p> 2024 Joseph Groom | 
-      <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a></p>
-    </footer>
+    <footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div></footer>
 
   </body>
 </html>

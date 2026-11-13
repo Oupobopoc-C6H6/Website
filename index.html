@@ -3,52 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joseph Groom's personal website - Biomedical Engineering Student and Aspiring Medical Device Innovator.">
-  <title>Home - Joseph Groom</title>
+  <meta name="description" content="Joseph A. Groom — biomedical engineering graduate student working in embedded systems, custom electronics, instrumentation, and signal processing.">
+  <meta name="theme-color" content="#171a1d">
+  <title>Joseph A. Groom | Embedded Systems &amp; Electronics</title>
   <link rel="stylesheet" href="assets/stylesheet.css">
-  <link rel="icon" href="/assets/Icon.png">
+  <link rel="icon" href="assets/Icon.png">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a class="nav-button" href="index.html" title="Home">Home</a>
-    <a class="nav-button" href="about.html" title="About Me">About Me</a>
-    <a class="nav-button" href="projects.html" title="Projects">Projects</a>
-    <a class="nav-button" href="resume.html" title="Resume">Resume</a>
-    <a class="nav-button" href="contact.html" title="Contact">Contact</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="index.html"><span class="brand-mark" aria-hidden="true">//</span> Joseph A. Groom</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
-
-  <!-- Main Content -->
-  <main>
-    <section class="hero">
-      <h1>I’m Joseph Groom.</h1>
-      <p>
-        I’m a Biomedical Engineering student with a passion for medical technology, electronics, and signal processing. 
-        My personal experience with cardiac medical devices has shaped my drive to design innovative healthcare solutions.
-      </p>
-      <p>
-        I enjoy solving complex engineering challenges and building real-world solutions. 
-        Take a look at my latest projects!
-      </p>
-      <div class="hero-buttons">
-        <a href="projects.html" class="cta-button">Projects</a>
-        <a href="resume.html" class="cta-button">Resume</a>
+  <main class="home-main">
+    <section class="hero-layout" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">ENGINEERING PORTFOLIO <span class="eyebrow-line"></span></p>
+        <h1 id="hero-title">Joseph A. Groom</h1>
+        <p class="hero-role">Biomedical Engineer · Embedded Systems &amp; Electronics</p>
+        <p class="hero-lead">I design, build, and test electronic systems—from low-power microcontroller devices and custom PCBs to instrumentation and signal processing.</p>
+        <p class="hero-detail">B.S. in Biomedical Engineering, University of South Florida (2026). Currently pursuing an M.S. focused on bioelectronics and analytical engineering.</p>
+        <div class="hero-buttons">
+          <a class="cta-button" href="projects.html">Explore Projects <span aria-hidden="true">→</span></a>
+          <a class="cta-button secondary" href="resume.html">View Resume</a>
+        </div>
       </div>
-      <h2>Connect With Me</h2>
-      <p>I'm always looking to connect with others in the biomedical engineering and tech fields. Feel free to check out my work and reach out!</p>
-      <div>
-        <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank" class="cta-button">LinkedIn</a>
-        <a href="https://github.com/Oupobopoc-C6H6" target="_blank" class="cta-button">GitHub</a>
-      </div> 
+      <div class="hero-visuals" aria-label="PERIFUSE engineering design previews">
+        <a class="hero-feature visual-panel" href="projects/perifuse.html">
+          <img src="assets/projects/perifuse/printed-design.jpg" alt="PERIFUSE printed prototype design" loading="eager">
+          <span class="visual-label">PERIFUSE · Wearable medical device <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="hero-small visual-panel" href="projects/perifuse.html#electronics">
+          <img src="assets/projects/perifuse/pcb-layout.jpg" alt="Custom PCB layout for PERIFUSE" loading="lazy">
+          <span class="visual-label">Custom PCB layout</span>
+        </a>
+        <a class="hero-small visual-panel" href="projects/perifuse.html#mechanical">
+          <img src="assets/projects/perifuse/assembly-diagram.jpg" alt="PERIFUSE mechanical assembly diagram" loading="lazy">
+          <span class="visual-label">CAD and device integration</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="skills-bar" aria-label="Technical focus areas">
+      <span class="skills-heading">CORE SKILLS</span>
+      <span class="skill-chip">Embedded Systems</span>
+      <span class="skill-chip">PCB Design</span>
+      <span class="skill-chip">Low-Power Electronics</span>
+      <span class="skill-chip">Signal Processing</span>
+      <span class="skill-chip">Instrumentation</span>
+      <span class="skill-chip">C/C++ & MATLAB</span>
+    </section>
+
+    <section class="featured-section" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">SELECTED WORK</p><h2 id="featured-title">Featured Projects</h2></div>
+        <a class="section-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a>
+      </div>
+      <article class="capstone-spotlight">
+          <div class="capstone-spotlight-copy">
+            <p class="project-category">FLAGSHIP PROJECT · SENIOR CAPSTONE</p>
+            <h3>PERIFUSE</h3>
+            <p class="capstone-subtitle">Localized Immune Cell Delivery Device</p>
+            <p>A wearable device concept developed with Moffitt Cancer Center, combining custom embedded electronics, low-power dosing control, mechanical design, and cell-handling research.</p>
+            <div class="tag-row"><span>Custom PCB</span><span>Embedded C</span><span>Low-Power Design</span><span>CAD</span><span>Biological Testing</span></div>
+            <a class="cta-button" href="projects/perifuse.html">Explore PERIFUSE <span aria-hidden="true">→</span></a>
+          </div>
+          <a class="capstone-spotlight-visual capstone-photo" href="projects/perifuse.html" aria-label="View PERIFUSE capstone details">
+          <img src="assets/projects/perifuse/assembly-diagram.jpg" alt="PERIFUSE mechanical assembly design" loading="lazy">
+          <span>CAD assembly · Detailed project case study ↗</span>
+        </a>
+      </article>
+      <div class="featured-grid">
+        <article class="feature-card">
+          <a class="feature-image" href="projects/gru-mobile.html"><img src="assets/projects/gru-mobile/cover.jpg" loading="lazy" alt="Gru-mobile autonomous toy prototype"></a>
+          <div class="feature-content"><p class="project-category">EMBEDDED SYSTEMS</p><h3>Autonomous Toy Development</h3><p>Programmed an ATmega328P-based system using infrared and ultrasonic sensing to control an interactive mobile prototype.</p><div class="tag-row"><span>ATmega328P</span><span>C/C++</span><span>Sensor Integration</span></div><a class="card-link" href="projects/gru-mobile.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image" href="projects/analog-processing.html"><img src="assets/projects/analog-processing/cover.jpg" loading="lazy" alt="Analog pulse oximetry filtering project"></a>
+          <div class="feature-content"><p class="project-category">CIRCUIT DESIGN</p><h3>Pulse Oximetry Signal Filtering</h3><p>Designed and simulated analog filtering and amplification stages for biomedical sensor signals.</p><div class="tag-row"><span>LTspice</span><span>Analog Circuits</span><span>Filtering</span></div><a class="card-link" href="projects/analog-processing.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image" href="projects/digital-processing.html"><img src="assets/projects/digital-processing/cover.jpg" loading="lazy" alt="Cardiac flow data analysis visualization"></a>
+          <div class="feature-content"><p class="project-category">SIGNAL PROCESSING</p><h3>Cardiac Flow Data Analysis</h3><p>Processed MRI-derived blood-flow measurements in MATLAB to detect cardiac cycles and estimate stroke volume.</p><div class="tag-row"><span>MATLAB</span><span>Digital Filtering</span><span>Data Analysis</span></div><a class="card-link" href="projects/digital-processing.html">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+      </div>
+    </section>
+    <section class="contact-banner">
+      <div><p class="eyebrow">LET'S CONNECT</p><h2>Interested in working together?</h2><p>I'm exploring opportunities in embedded electronics, instrumentation, and medical device engineering.</p></div>
+      <a class="cta-button" href="contact.html">Get in touch <span aria-hidden="true">→</span></a>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p> 2024 Joseph Groom | 
-      <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a>
-    </p>
-  </footer>
+  <footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div></footer>
 </body>
 </html>
