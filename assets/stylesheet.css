@@ -188,3 +188,11 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
 .portfolio-note .eyebrow {margin-bottom:9px;}
 .case-animation img {display:block;width:100%;height:auto;max-height:340px;object-fit:contain;}
 @media (max-width:680px) {.portfolio-note {padding:22px;}}
+
+/* Personal identity marks: monogram in navigation, scarab as an About-page accent. */
+.site-nav .site-brand {display:inline-flex;align-items:center;gap:.65rem;}
+.site-nav .brand-logo {width:34px;height:34px;display:block;object-fit:contain;border-radius:6px;flex-shrink:0;}
+.about-personal-mark {display:flex;align-items:center;gap:18px;max-width:660px;margin-top:36px;padding:18px 20px;border:1px solid var(--border);border-radius:10px;background:var(--panel);}
+.about-personal-mark img {width:76px;height:76px;flex:0 0 auto;object-fit:contain;border-radius:9px;}
+.about-personal-mark p {font-size:.9rem;color:var(--muted);margin:0;}
+@media(max-width:480px){.about-personal-mark{flex-direction:column;align-items:flex-start;}}
