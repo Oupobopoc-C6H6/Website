@@ -180,3 +180,11 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
 .case-figure figcaption {padding:10px 14px;color:var(--muted);font-size:.88rem;line-height:1.5;}
 .case-download {margin:18px 0;}
 @media(max-width:680px){.case-gallery{grid-template-columns:1fr;}.case-figure img{height:auto;max-height:320px;}}
+
+/* Replaces the homepage contact pitch with a description of engineering approach. */
+.portfolio-note {margin-top:64px;padding:30px 34px;background:var(--bg-alt);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;}
+.portfolio-note h2 {font-size:1.6rem;}
+.portfolio-note p:not(.eyebrow) {max-width:78ch;color:var(--muted);}
+.portfolio-note .eyebrow {margin-bottom:9px;}
+.case-animation img {display:block;width:100%;height:auto;max-height:340px;object-fit:contain;}
+@media (max-width:680px) {.portfolio-note {padding:22px;}}
