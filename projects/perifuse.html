@@ -7,11 +7,11 @@
 <meta name="description" content="PERIFUSE is a wearable immune cell delivery device prototype developed in collaboration with Moffitt Cancer Center, integrating custom PCB design, embedded firmware, and mechanical engineering.">
 <title>PERIFUSE | Joseph A. Groom</title>
 <link rel="stylesheet" href="../assets/stylesheet.css">
-<link rel="icon" href="../assets/Icon.png">
+<link rel="icon" href="../assets/circuit-monogram.png">
 </head>
 <body>
 <nav class="site-nav" aria-label="Main navigation">
-  <a class="site-brand" href="../index.html"><span class="brand-mark" aria-hidden="true">//</span> Joseph A. Groom</a>
+  <a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
   <div class="nav-links">
     <a href="../index.html">Home</a><a href="../about.html">About</a>
     <a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a>
@@ -49,7 +49,9 @@
     <p>I developed a compact <strong>17 × 12 mm custom PCB</strong> built around the <strong>ATtiny1616</strong> microcontroller. The system used a 150 mAh single-cell Li-ion battery, a regulated 5 V supply for the piezoelectric pump, and a MOSFET switching stage. Component selection and board layout balanced size, electrical requirements, manufacturability, and low standby power.</p>
     <div class="case-gallery"><figure class="case-figure"><a href="../assets/projects/perifuse/pcb-layout.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/pcb-layout.jpg" alt="KiCad PCB layout of the PERIFUSE controller" loading="lazy"></a><figcaption>Custom controller PCB layout.</figcaption></figure>
 <figure class="case-figure"><a href="../assets/projects/perifuse/manufactured-pcb.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/manufactured-pcb.jpg" alt="Manufactured PERIFUSE PCB shown beside a US quarter" loading="lazy"></a><figcaption>Manufactured PCB beside a US quarter for scale.</figcaption></figure>
-<figure class="case-figure"><a href="../assets/projects/perifuse/firmware-flowchart.png" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/firmware-flowchart.png" alt="PERIFUSE software and pump sequencing flowchart" loading="lazy"></a><figcaption>Control-flow diagram from the firmware design process.</figcaption></figure></div><p class="case-download"><a class="cta-button secondary" href="../assets/projects/perifuse/pcb-schematic.pdf" target="_blank" rel="noopener noreferrer">View PCB schematic (PDF) ↗</a></p>
+<figure class="case-figure"><a href="../assets/projects/perifuse/firmware-flowchart.png" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/firmware-flowchart.png" alt="PERIFUSE software and pump sequencing flowchart" loading="lazy"></a><figcaption>Control-flow diagram from the firmware design process.</figcaption></figure>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/pcb-schematic.jpg" alt="Complete PERIFUSE controller electronic schematic" loading="lazy"></a><figcaption>Controller schematic. Open the image for a full-size view.</figcaption></figure>
+      </div>
   </section>
   <section id="firmware" class="perifuse-section">
     <h2>Embedded Firmware &amp; Power Management</h2>
@@ -82,11 +84,11 @@
   </section>
   <section id="resources" class="perifuse-section">
     <h2>Supporting Materials</h2>
-    <p>Selected project visuals and the PCB schematic are available on this page. Other artifacts can be linked once suitable public versions and any necessary approvals are available.</p>
+    <p>The project poster and controller schematic are available below, along with the design and testing imagery on this page. Additional source files can be shared after they are organized and cleared for public release.</p>
     <ul class="perifuse-roadmap">
       <li><strong>Project presentation:</strong> 40-minute design walkthrough; ideally include chapter timestamps and a short summary.</li>
-      <li><strong>University poster:</strong> Prepared project poster. A direct download link can be added when its PDF is available in the website repository.</li>
-      <li><strong>Electronics:</strong> <a href="../assets/projects/perifuse/pcb-schematic.pdf" target="_blank" rel="noopener noreferrer">PCB schematic (PDF)</a> and illustrated PCB layout above. KiCad source, Gerbers, and curated BOM can be linked after publication review.</li>
+      <li><strong>University poster:</strong> <a href="../assets/projects/perifuse/final-poster.png" target="_blank" rel="noopener noreferrer">View the full-resolution project poster (PNG)</a>. The poster opens separately rather than being embedded on this page.</li>
+      <li><strong>Electronics:</strong> <a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer">Controller schematic image</a> and illustrated PCB layout above. KiCad source, Gerbers, and curated BOM can be linked after publication review.</li>
       <li><strong>Firmware:</strong> Embedded C source with a README explaining target MCU, toolchain, and scheduling architecture.</li>
       <li><strong>Mechanical:</strong> Assembly, chassis, and reservoir design drawings are illustrated above. Editable CAD or STEP exports can be linked once ready.</li>
       <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; quantitative flow, power, temperature, and cell-viability reports still need supporting datasets and annotations.</li>
