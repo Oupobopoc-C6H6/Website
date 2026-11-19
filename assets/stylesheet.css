@@ -410,3 +410,26 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
   .sunscream-flow .flow-node small { font-size: .68rem; }
   .sunscream-flow .flow-stage { font-size: .58rem; letter-spacing: .07em; }
 }
+
+/* Ophthalmic instrumentation plots, experimental photograph and sensor architecture. */
+.ophth-feature-image,.ophth-project-image {background:#f3f4f5;}
+.ophth-feature-image img {object-fit:contain;background:#f3f4f5;padding:8px;}
+.project-img.ophth-project-image {object-fit:contain;padding:8px;}
+.ophthalmic-case .ophth-hero {margin:26px 0;overflow:hidden;border:1px solid var(--border);border-radius:11px;background:#f3f4f5;}
+.ophthalmic-case .ophth-hero a {display:block;padding:10px;}
+.ophthalmic-case .ophth-hero img {width:100%;max-height:580px;height:auto;object-fit:contain;}
+.ophthalmic-case .ophth-hero figcaption {padding:12px 17px;color:var(--muted);font-size:.85rem;background:var(--panel);line-height:1.5;}
+.ophthalmic-case .ophthalmic-diagram {text-align:center;}
+.ophthalmic-case .ophth-node,.ophthalmic-case .ophth-inputs span {display:flex;align-items:center;justify-content:center;padding:12px 10px;min-height:57px;border:1px solid #8c754d;border-radius:8px;background:#182127;color:var(--text);font-size:.86rem;line-height:1.35;text-align:center;}
+.ophthalmic-case .ophth-inputs {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+.ophthalmic-case .ophth-node-active {border-color:var(--accent);background:#283037;}
+.ophthalmic-case .ophth-down-arrow {color:var(--accent);text-align:center;padding:5px;font-size:1.45rem;line-height:1.3;}
+.ophthalmic-case .ophth-dual {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+.ophthalmic-case .ophth-dual > div {min-width:0;}
+.ophthalmic-case .ophth-node-small {min-height:60px;}
+.ophthalmic-case .ophth-lab-layout {display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(22px,3vw,34px);align-items:start;}
+.ophthalmic-case .ophth-lab-layout > div {min-width:0;}
+.ophthalmic-case .ophth-lab-photo {margin:0;overflow:hidden;border:1px solid var(--border);border-radius:10px;background:var(--panel);}
+.ophthalmic-case .ophth-lab-photo img {display:block;width:100%;max-height:430px;object-fit:contain;background:#172025;}
+.ophthalmic-case .ophth-lab-photo figcaption {padding:12px 15px;color:var(--muted);font-size:.82rem;line-height:1.5;}
+@media(max-width:850px){.ophthalmic-case .ophth-lab-layout{grid-template-columns:1fr;}}
