@@ -1,87 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#171a1d">
-    <meta name="description" content="MATLAB cardiac flow analysis and signal processing project by Joseph A. Groom">
-    <title>Digital Signal Processing - Joseph Groom</title>
-    <link rel="stylesheet" href="../assets/stylesheet.css">
-    <link rel="icon" href="../assets/circuit-monogram.png">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="site-nav" aria-label="Main navigation">
-    <a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../projects.html" aria-current="page">Projects</a>
-      <a href="../resume.html">Resume</a>
-      <a href="../contact.html">Contact</a>
-    </div>
-  </nav>
-
-    <!-- Main Content -->
-    <main>
-        <h1>Digital Signal Processing: ECG</h1>
-        <p><strong>Project Focus:</strong> Filtering and analyzing signals to extract meaningful physiological data.</p>
-        <p>Spring 2024, MATLAB Programing</p>
-
-        <!-- Project Overview -->
-        <section class="project-overview">
-            <h2>Project Overview</h2>
-            <p>
-                The goal of this project was to analyze MRI-derived blood flow data from the left ventricle during exercise and estimate the volume of blood pumped per cardiac cycle. 
-                Using MATLAB, I processed the provided dataset by first applying digital filtering techniques to remove noise and enhance signal clarity.
-            </p>
-            <p>
-                Next, I identified individual cardiac cycles by detecting troughs in the flow-time data, marking the beginning of each heartbeat. 
-                The signal was then segmented accordingly, allowing for further analysis. 
-                To estimate stroke volume,the amount of blood ejected per heartbeat,I implemented the trapezoidal rule for numerical integration, calculating the area under each flow-time curve.
-            </p>
-            <p>
-                This approach provided a quantitative measure of cardiac output based on MRI data, demonstrating the effectiveness of signal processing and computational analysis in biomedical applications. 
-                The final results included visual representations of the raw and processed data, segmented heartbeats, and a histogram of computed stroke volumes. 
-                This project highlights my skills in MATLAB programming, signal processing, and numerical methods for biomedical analysis.
-            </p>
-        </section>
-
-        <!-- Project Output -->
-        <section class="results-visualization">
-            <h2>Processed Data & Stroke Volume Estimation</h2>
-            <p>The graph below shows the filtered MRI blood flow signal with detected cardiac cycles. Using MATLAB, the signal was processed to identify individual heartbeats and estimate the blood volume pumped per cycle.</p>
-            
-            <!-- Output Image -->
-            <img src="../assets/projects/digital-processing/analysis-output.jpg" alt="Processed MRI Blood Flow Data Output">
-        
-            <h2>MATLAB Implementation</h2>
-            <p>The following MATLAB script loads and processes the blood flow data, applies smoothing, detects troughs, and estimates stroke volume:</p>
-        
-            <!-- MATLAB Code Snippet -->
-            <pre><code>
-            clear; clf; clc;
-            flowData = load("flow.csv"); % Load Data
-            smoothedFlowData = flowData; % Copy original data
-            smoothedFlowData(:,2) = smoothdata(flowData(:,2), "gaussian", "SamplePoints", flowData(:,1), "SmoothingFactor", 0.25);
-            [troughs, cycle_times, cycle_flows, areas] = processFlow(smoothedFlowData); % Process Flow
-            displayResults(flowData, smoothedFlowData, troughs, cycle_times, cycle_flows, areas); % Display results
-            fprintf("Mean ± Std Dev of stroke volume = %f ± %f", mean(areas), std(areas));
-            </code></pre>
-        
-            <p>Full MATLAB functions for **filtering, segmentation, and stroke volume estimation** are available on my GitHub repository:</p>
-            
-            <!-- GitHub Link -->
-            <a href="https://github.com/Oupobopoc-C6H6/digital-processing" class="cta-button">View Full Code on GitHub</a>
-        </section>
-        
-
-        <!-- Back to Projects Button -->
-         <p></p>
-        <a href="../projects.html" class="back-button">← Back to Projects</a>
-    </main>
-
-    <!-- Footer -->
-    <footer><p>2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
-</body>
-</html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171a1d"><meta name="description" content="MATLAB project using Gaussian smoothing, cycle segmentation and trapezoidal integration on MRI-derived left-ventricular flow data."><title>MRI Cardiac Blood-Flow Analysis | Joseph A. Groom</title><link rel="stylesheet" href="../assets/stylesheet.css"><link rel="icon" href="../assets/circuit-monogram.png"></head><body>
+<nav class="site-nav" aria-label="Main navigation"><a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a><div class="nav-links"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a></div></nav>
+<main class="portfolio-case">
+<p class="eyebrow">MATLAB · SIGNAL PROCESSING · NUMERICAL METHODS</p>
+<h1>MRI-Derived Cardiac Blood-Flow Analysis</h1>
+<p class="case-lead">A MATLAB pipeline to smooth left-ventricular flow measurements, identify individual cardiac cycles and compute the area beneath each cycle using trapezoidal numerical integration.</p>
+<div class="tag-row"><span>MATLAB</span><span>Gaussian Smoothing</span><span>Cycle Detection</span><span>Numerical Integration</span><span>Trapezoidal Rule</span></div>
+<div class="case-metrics"><div><strong>4 plots</strong><span>Signals, cycles and distribution</span></div><div><strong>trapz</strong><span>Per-cycle numerical integration</span></div><div><strong>98,515.75</strong><span>Reported mean area in dataset units</span></div></div>
+<section class="case-section"><h2>Objective</h2><p>Using time-and-flow data obtained from a left-ventricular MRI study, the project aimed to visualize repeating flow cycles and estimate their areas. When appropriate flow and time units are established, the integral of flow over time can represent volume. The submitted report does not establish a verified conversion of its computed values into milliliters, so results are presented in the dataset's units.</p></section>
+<section class="case-section"><h2>Signal-processing workflow</h2><div class="case-flow case-flow-wide"><span>CSV flow data</span><span>Gaussian smoothing</span><span>Trough detection</span><span>Cycle integration</span></div>
+<div class="perifuse-grid"><div class="perifuse-panel"><h3>Smoothing</h3><p>Applied MATLAB <code>smoothdata</code> with a Gaussian method, timestamps supplied as sample points and a smoothing factor of 0.25.</p></div>
+<div class="perifuse-panel"><h3>Heartbeat boundaries</h3><p>Detected prominent peaks and searched backward to identify troughs separating consecutive cycles.</p></div>
+<div class="perifuse-panel"><h3>Integration</h3><p>Segmented cycles and applied <code>trapz</code> to flow-versus-time data, excluding incomplete boundary segments.</p></div>
+<div class="perifuse-panel"><h3>Visualization</h3><p>Plotted raw and smoothed waveforms, overlaid cardiac cycles and a histogram of calculated areas.</p></div></div></section>
+<section class="case-section"><h2>Results</h2>
+<figure class="case-hero-image"><a href="../assets/projects/digital-processing/analysis-output.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/digital-processing/analysis-output.jpg" alt="MATLAB plots of original and smoothed flow data, individual cycles and a histogram of integrated areas" loading="lazy"></a><figcaption>Four-part MATLAB visualization of the cardiac flow processing and integration results.</figcaption></figure>
+<p>The report gives a mean area of <strong>98,515.754379</strong> and a standard deviation of <strong>6,070.890172</strong> in the input flow-time units. These values summarize the analyzed cycles; interpreting them physiologically requires a confirmed units convention and any relevant scaling.</p></section>
+<section class="case-section"><h2>Implementation</h2><p>The code uses a main script and the functions <code>processFlow</code>, <code>findTroughs</code>, <code>findCycles</code> and <code>displayResults</code>. The per-cycle integration is:</p>
+<pre><code>for i = 1:length(cycle_times)
+    areas(i) = trapz(cycle_times{i}, cycle_flows{i});
+end</code></pre>
+<p>The workflow illustrates practical use of numerical methods and programmatic data visualization. Future improvements could make peak thresholds adaptive and verify physical units before reporting stroke volume.</p></section>
+<p class="case-back"><a class="back-button" href="../projects.html">← Back to Projects</a></p></main><footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer></body></html>
