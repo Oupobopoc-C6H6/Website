@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resume of Joseph Groom - Biomedical Engineering Student">
-    <title>Resume | Joseph A. Groom</title>
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
-    <link rel="icon" href="assets/circuit-monogram.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Joseph A. Groom — biomedical engineering, embedded systems, PCB design, and medical device development.">
+  <title>Resume | Joseph A. Groom</title>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
+  <link rel="icon" href="assets/circuit-monogram.png">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="site-nav" aria-label="Main navigation">
+  <nav class="site-nav" aria-label="Main navigation">
     <a class="site-brand" href="index.html"><img class="brand-logo" src="assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -21,71 +20,90 @@
     </div>
   </nav>
 
-    <!-- Resume Section -->
-    <main class="resume">
-        <div class="container">
-            <h1>Resume</h1>
-            
-            <!-- Education Section -->
-            <h2>Education</h2>
-            <p><strong>Bachelor of Science in Biomedical Engineering</strong><br>
-               University of South Florida, Tampa, FL<br>
-               Expected Graduation: 2026</p>
+  <main class="resume">
+    <div class="container">
+      <h1>Resume</h1>
+      <p>Biomedical Engineer | Embedded Systems &amp; Medical Device Design</p>
+      <p>Explore my engineering experience below, or <a href="assets/joseph-groom-resume.pdf" download="Joseph_A_Groom_Resume.pdf">download the one-page resume (PDF)</a>.</p>
 
-            <!-- Skills Section -->
-            <h2>Skills</h2>
-            <ul>
-                <li>Software: MATLAB, C++, LTspice, Java, Git/GitHub, HTML/CSS</li>
-                <li>Certifications: MATLAB, Microsoft Office (Excel, Publisher)</li>
-                <li>Laboratory: Safe Lab Management</li>
-            </ul>
+      <section aria-labelledby="resume-education">
+        <h2 id="resume-education">Education</h2>
+        <p><strong>University of South Florida</strong> — Tampa, FL</p>
+        <ul>
+          <li><strong>Master of Science in Biomedical Engineering</strong> — GPA: 4.0; expected May 2027</li>
+          <li><strong>Bachelor of Science in Biomedical Engineering</strong> — GPA: 3.9; May 2026</li>
+        </ul>
+      </section>
 
-            <!-- Experience Section -->
-            <h2>Biomedical Engineering Experience</h2>
+      <section aria-labelledby="resume-skills">
+        <h2 id="resume-skills">Technical Skills</h2>
+        <ul>
+          <li><strong>Hardware &amp; Embedded:</strong> PCB design and layout, circuit prototyping, power management, AVR microcontrollers (ATtiny1616, ATmega328P), ESP32, SPI, I²C, UART</li>
+          <li><strong>Programming &amp; HDL:</strong> Embedded C/C++, Python, MATLAB, VHDL</li>
+          <li><strong>Engineering Tools:</strong> KiCad, LTspice, SolidWorks, Vivado, Vitis</li>
+          <li><strong>Signal Processing:</strong> Digital filtering, data acquisition, signal analysis, FFT</li>
+        </ul>
+      </section>
 
-            <h3>Undergraduate Research Assistant, USF TTEB Lab</h3>
-            <p><em>Translational Tissue Engineering and Biofabrication Laboratory</em> (2024 - Present)</p>
-            <ul>
-                <li>Working with electrospinning polymers to create nanofiber sheets and test mechanical properties.</li>
-                <li>Researching heart-valve tissue engineering, biomaterials, and biomechanics.</li>
-            </ul>
+      <section aria-labelledby="resume-experience">
+        <h2 id="resume-experience">Biomedical Engineering Experience</h2>
 
-            <h3>ECG Signal Processing & Filtering</h3>
-            <p><em>Engineering Project (2023 - 2024)</em></p>
-            <ul>
-                <li>Developed a MATLAB-based pipeline to isolate ECG waveform components.</li>
-                <li>Applied mathematical modeling and filtering techniques to improve biomedical data analysis.</li>
-            </ul>
+        <h3>PERIFUSE — Wearable Immune Cell Delivery System</h3>
+        <p><em>Moffitt Cancer Center | University of South Florida</em> · Aug 2025 – Aug 2026</p>
+        <ul>
+          <li>Designed a compact 17 × 12 mm PCB in KiCad integrating an ATtiny1616 MCU, 150 mAh Li-ion battery, 5 V boost converter, and MOSFET-switched piezoelectric micropump.</li>
+          <li>Designed PCB power distribution with wider supply traces, separated control routing, decoupling capacitors, and UPDI programming access.</li>
+          <li>Developed low-power embedded C firmware using RTC overflow interrupts and sleep modes for autonomous, scheduled micropump actuation.</li>
+          <li>Resolved RTC/PIT timer configuration issues through register-level debugging, implementing RTC-overflow-based scheduling.</li>
+          <li>Characterized battery discharge and device power consumption, estimating 10-day operation with a conservative margin against a seven-day design target.</li>
+          <li>Integrated micropump control and fluid-handling electronics into a wearable prototype, evaluating actuation timing, flow performance, and system power requirements.</li>
+        </ul>
 
-            <h3>Pulse Oximeter Noise Filtration</h3>
-            <p><em>Engineering Project (2024)</em></p>
-            <ul>
-                <li>Designed and simulated a signal filtration system in LTspice.</li>
-                <li>Used MATLAB for real-time data acquisition and signal processing.</li>
-            </ul>
+        <h3>USF Ophthalmology Research Lab</h3>
+        <p><em>Undergraduate Research Assistant</em> · May 2025 – Dec 2025</p>
+        <p>Research mentor: <a href="https://www.linkedin.com/in/alexandra-zamitalo-pomares/" target="_blank" rel="noopener noreferrer">Dr. Alexandra Zamitalo</a> | Principal Investigator: <a href="https://www.linkedin.com/in/christopher-passaglia-27ba1a30/" target="_blank" rel="noopener noreferrer">Dr. Christopher Passaglia</a></p>
+        <ul>
+          <li>Implemented I²C and ADC-based sensor acquisition for Sensirion LG16 flow and Honeywell ABP2 pressure sensors in a microcontroller-based instrumentation system.</li>
+          <li>Developed a standalone Python application for 15 Hz data acquisition, real-time visualization, and CSV export to support experimental testing.</li>
+          <li>Collected experimental data contributing to co-authored research presented at the 2025 ISER Glaucoma Symposium.</li>
+          <li>Supported in vivo measurement of intraocular pressure and uveoscleral flow in rats under an IACUC-approved research protocol.</li>
+        </ul>
+      </section>
 
-            <h3>Gru-mobile, Software/Hardware Lead</h3>
-            <p><em>Engineering Project (2022)</em></p>
-            <ul>
-                <li>Programmed an ATmega328P microcontroller for automated movement using IR and ultrasonic sensors.</li>
-                <li>Managed communication between project team leads over 15 weeks.</li>
-            </ul>
+      <section aria-labelledby="resume-projects">
+        <h2 id="resume-projects">Selected Engineering Projects</h2>
 
-            <!-- Affiliations -->
-            <h2>Affiliations & Leadership</h2>
-            <ul>
-                <li>Member, Engineers Without Borders (2022 - Present)</li>
-            </ul>
+        <h3>FPGA-Based SPI Display Controller</h3>
+        <p><em>Fall 2026</em></p>
+        <ul>
+          <li>Developed and verified a VHDL-based SPI controller on an Artix-7 FPGA to initialize an ST7789 TFT display and render graphics on physical hardware.</li>
+        </ul>
 
-            <!-- Download Resume Button -->
-            <p><strong>Download Resume:</strong></p>
+        <h3>Pulse Oximeter Noise Filtration</h3>
+        <p><em>Engineering Project · Fall 2024</em></p>
+        <ul>
+          <li>Designed and simulated a noise filtration system for pulse oximeter signals using LTspice, optimizing signal clarity.</li>
+          <li>Implemented MATLAB for data acquisition, graphing, and analysis of filtered physiological signals.</li>
+          <li>Applied signal processing techniques to improve raw biomedical data quality for accurate analysis.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="resume-additional">
+        <h2 id="resume-additional">Additional Experience</h2>
+        <h3>Graduate Teaching Assistant — Embedded Systems &amp; Biomedical Engineering Capstone</h3>
+        <p><em>University of South Florida</em> · Aug 2026 – Present</p>
+        <ul>
+          <li>Supported embedded systems instruction and evaluated industry-sponsored medical device designs, providing feedback on technical feasibility and component selection.</li>
+        </ul>
+      </section>
+
+      <p><strong>Download Resume:</strong></p>
             <a href="assets/joseph-groom-resume.pdf" download="Joseph-Groom-Resume.pdf">
                 <button>Download Resume (PDF)</button>
             </a>
-        </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div></footer>
+  <footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div></footer>
 </body>
 </html>
