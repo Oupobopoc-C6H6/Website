@@ -32,7 +32,7 @@
     <a href="../assets/projects/perifuse/printed-design.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/printed-design.jpg" alt="Photograph of a printed PERIFUSE design prototype" loading="eager"></a>
     <figcaption>Printed prototype hardware from the PERIFUSE development process.</figcaption>
   </figure>
-  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> The report documents promising 72-hour resin-compatibility imaging as well as limitations in earlier experiments. This is a research prototype and has not demonstrated clinical efficacy.</p>
+  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> Seventy-two-hour resin-compatibility imaging showed promising results, although earlier experiments also revealed material-related challenges. This is a research prototype and has not demonstrated clinical efficacy.</p>
   <nav class="perifuse-toc" aria-label="Sections of this project">
     <a href="#challenge">Design challenge</a><a href="#electronics">Electronics</a><a href="#firmware">Firmware</a><a href="#mechanical">Mechanical design</a><a href="#testing">Testing</a><a href="#resources">Resources</a>
   </nav>
@@ -83,8 +83,8 @@
 <h2>Testing, Results &amp; Engineering Tradeoffs</h2>
 <p>The six prototype iterations investigated biological compatibility, electrical power consumption, fluid delivery and wearability. These results informed engineering decisions but did not validate clinical performance.</p>
 <div class="perifuse-grid">
-<div class="perifuse-panel"><h3>72-hour live/dead imaging</h3><p>Following cell loss with earlier SLA resin preparations, the team compared post-processing methods for Bioclear resin. Jurkat cells were labeled with CellTracker Green CMFDA and propidium iodide and monitored by confocal imaging over 72 hours. The final report describes approximately 90% green-stained viable cell area in a qualitative Fiji analysis for acetone-treated material. Imaging artifacts were a noted limitation, and this was not a full-device viability validation.</p></div>
-<div class="perifuse-panel"><h3>Power and battery characterization</h3><p>RTC overflow scheduling and sleep reduced the controller's active duty cycle. A one-day operation test showed approximately 4.08 V remaining, interpreted as about 5% battery usage with a voltage-based estimate. The report suggested around 10 days of practical operation after accounting for protection circuitry and uncertainty, rather than a verified ten-day endurance test.</p></div>
+<div class="perifuse-panel"><h3>72-hour live/dead imaging</h3><p>Following cell loss with earlier SLA resin preparations, the team compared post-processing methods for Bioclear resin. Jurkat cells were labeled with CellTracker Green CMFDA and propidium iodide and monitored by confocal imaging over 72 hours. Qualitative Fiji image analysis indicated approximately 90% green-stained viable cell area for the acetone-treated material. Imaging artifacts were a noted limitation, and this was not a full-device viability validation.</p></div>
+<div class="perifuse-panel"><h3>Power and battery characterization</h3><p>RTC overflow scheduling and sleep reduced the controller's active duty cycle. Based on the power characterization and battery capacity, I estimated approximately 10 days of practical operation. This remains a projected runtime rather than a verified 10-day endurance result.</p></div>
 <div class="perifuse-panel"><h3>Localization testing</h3><p>The team used a silicone tissue model and dyed water to examine fluid localization. The initial experiment retained visible fluid in 11 of 12 regions, though manual injection and model orientation limited its conclusions. Follow-up work investigated a more controlled injection setup. This was a surrogate experiment, not a demonstration in tissue or patients.</p></div>
 <div class="perifuse-panel"><h3>Engineering obstacles</h3><p>Challenges included resin cytotoxicity, fluid-path vacuum lock, pump wear and reliability, and timer configuration. Firmware iterations moved from an unsuccessful periodic interrupt timer approach toward RTC overflow scheduling. Comfort testing with approximately 30 participants informed mechanical and adhesive revisions led by the project team.</p></div>
 </div>
@@ -98,14 +98,14 @@
 </section>
   <section id="resources" class="perifuse-section">
     <h2>Supporting Materials</h2>
-    <p>The university poster and controller schematic are available below. This case study draws on the team's final design report; additional technical sources can be linked after public-release review.</p>
+    <p>The university poster and controller schematic are available below. Additional technical source files can be linked after public-release review.</p>
     <ul class="perifuse-roadmap">
       <li><strong>Project presentation:</strong> 40-minute design walkthrough; ideally include chapter timestamps and a short summary.</li>
       <li><strong>University poster:</strong> <a href="../assets/projects/perifuse/final-poster.png" target="_blank" rel="noopener noreferrer">View the full-resolution project poster (PNG)</a>. The poster opens separately rather than being embedded on this page.</li>
       <li><strong>Electronics:</strong> <a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer">Controller schematic image</a> and illustrated PCB layout above. KiCad source, Gerbers, and curated BOM can be linked after publication review.</li>
       <li><strong>Firmware:</strong> Embedded C source with a README explaining target MCU, toolchain, and scheduling architecture.</li>
       <li><strong>Mechanical:</strong> Assembly, chassis, and reservoir design drawings are illustrated above. Editable CAD or STEP exports can be linked once ready.</li>
-      <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; the report describes 72-hour resin-compatibility imaging, battery discharge characterization, and dyed-fluid localization experiments. Any published datasets should include methods and controls.</li>
+      <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; the testing included 72-hour resin-compatibility imaging, battery discharge characterization, and dyed-fluid localization experiments. Any published datasets should include methods and controls.</li>
     </ul>
     <p>For additional project documentation or implementation details, <a href="../contact.html">please reach out</a>.</p>
   </section>
