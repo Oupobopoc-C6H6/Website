@@ -44,7 +44,35 @@
 <p>The device transmits measurement and accumulation values using Bluetooth Serial. The buzzer provides an audible warning after the accumulated estimate crosses a fixed experimental threshold. Outdoor characterization also explored how ADC measurements related to reported UV Index values.</p>
 <p>Work in the repository includes embedded firmware, mechanical CAD, circuit design files, and the engineering team report. The published design is a prototype rather than a calibrated personal-exposure instrument.</p>
 </div>
-<div class="case-technical-panel"><p class="eyebrow">WIRELESS DATA PATH</p><div class="case-flow"><span>GUVA UV sensor</span><span>ESP32 ADC + calculation</span><span>Bluetooth terminal</span><span>Buzzer threshold</span></div></div></div>
+<div class="case-technical-panel">
+  <figure class="sunscream-flow" aria-label="GUVA UV sensor sends an analog reading to the ESP32. The ESP32 calculates an exposure estimate and sends readings to an Android terminal over Bluetooth while also controlling a threshold buzzer.">
+    <figcaption class="eyebrow">WIRELESS DATA FLOW</figcaption>
+    <div class="flow-node">
+      <span class="flow-stage">SENSOR INPUT</span>
+      <strong>GUVA UV sensor</strong>
+      <small>Analog UV response</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node flow-node-primary">
+      <span class="flow-stage">PROCESSING</span>
+      <strong>ESP32-WROOM-32</strong>
+      <small>ADC, UV estimate, accumulated exposure</small>
+    </div>
+    <div class="flow-fork" aria-hidden="true"></div>
+    <div class="flow-outputs">
+      <div class="flow-node">
+        <span class="flow-stage">WIRELESS OUTPUT</span>
+        <strong>Bluetooth Serial</strong>
+        <small>Android terminal readings</small>
+      </div>
+      <div class="flow-node">
+        <span class="flow-stage">LOCAL OUTPUT</span>
+        <strong>Buzzer alert</strong>
+        <small>Exposure threshold exceeded</small>
+      </div>
+    </div>
+  </figure>
+</div></div>
 <p><a href="https://github.com/Oupobopoc-C6H6/SunScream/tree/main/esp32-exposure-monitor" target="_blank" rel="noopener noreferrer">View the ESP32 implementation on GitHub ↗</a></p>
 </section>
 <section class="case-section"><h2>ATmega328P sunscreen analyzer</h2>
@@ -55,7 +83,35 @@
     (1 - test_reading / baseline_reading) * 100</code></pre>
 <p>Alongside the Python GUI, the repository includes microcontroller firmware and KiCad PCB files. This version does not incorporate the ESP32's Bluetooth alarm functionality.</p>
 </div>
-<div class="case-technical-panel"><p class="eyebrow">DESKTOP DATA PATH</p><div class="case-flow"><span>GUVA UV sensor</span><span>ATmega328P</span><span>Serial</span><span>Python/Tkinter GUI</span></div></div></div>
+<div class="case-technical-panel">
+  <figure class="sunscream-flow" aria-label="The GUVA UV sensor feeds the ATmega328P analog input. The microcontroller sends measurements over a wired serial connection to a Python Tkinter application for baseline and sunscreen sample comparison.">
+    <figcaption class="eyebrow">DESKTOP DATA FLOW</figcaption>
+    <div class="flow-node">
+      <span class="flow-stage">SENSOR INPUT</span>
+      <strong>GUVA UV sensor</strong>
+      <small>Analog measurement</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node flow-node-primary">
+      <span class="flow-stage">ACQUISITION</span>
+      <strong>ATmega328P</strong>
+      <small>ADC sampling on request</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node">
+      <span class="flow-stage">COMMUNICATION</span>
+      <strong>USB / Serial</strong>
+      <small>Measurement response to PC</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node">
+      <span class="flow-stage">ANALYSIS</span>
+      <strong>Python / Tkinter GUI</strong>
+      <small>Baseline vs. sunscreen sample</small>
+    </div>
+    <p class="flow-note">The GUI requests readings over the same serial link.</p>
+  </figure>
+</div></div>
 <p><a href="https://github.com/Oupobopoc-C6H6/SunScream/tree/main/atmega328p-sunscreen-analyzer" target="_blank" rel="noopener noreferrer">View the ATmega328P implementation on GitHub ↗</a></p>
 </section>
 <section class="case-section"><h2>Testing and limitations</h2>
