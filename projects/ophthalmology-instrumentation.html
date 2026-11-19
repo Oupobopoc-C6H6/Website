@@ -1,18 +1,99 @@
 <!DOCTYPE html>
-<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171a1d"><meta name="description" content="Biomedical sensor integration and Python acquisition software developed for ophthalmology laboratory research at USF."><title>Ophthalmology Instrumentation Research | Joseph A. Groom</title><link rel="stylesheet" href="../assets/stylesheet.css"><link rel="icon" href="../assets/circuit-monogram.png"></head><body>
-<nav class="site-nav" aria-label="Main navigation"><a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a><div class="nav-links"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a></div></nav>
-<main class="portfolio-case">
-<p class="eyebrow">UNIVERSITY OF SOUTH FLORIDA · RESEARCH INSTRUMENTATION</p>
-<h1>Ophthalmology Instrumentation Research</h1>
-<p class="case-lead">Combining sensors, microcontroller-connected acquisition hardware and Python software to support experiments related to intraocular pressure and uveoscleral fluid flow.</p>
-<div class="tag-row"><span>Biomedical Instrumentation</span><span>Microcontrollers</span><span>Sensor Interfaces</span><span>Python</span><span>Data Acquisition</span><span>Windows Application</span></div>
-<div class="case-metrics"><div><strong>15 Hz</strong><span>Experimental data logging rate</span></div><div><strong>Python</strong><span>Desktop interface and logging</span></div><div><strong>USF</strong><span>Ophthalmology research lab</span></div></div>
-<section class="case-section"><h2>Research context</h2><p>In the University of South Florida ophthalmology laboratory, I supported the development of a portable apparatus used in research involving eye-pressure and fluid-flow measurements. This required practical integration of electronic hardware, measurement sensors and software into a workflow suitable for repeated experiments.</p></section>
-<section class="case-section"><h2>Hardware and software integration</h2>
-<div class="case-split"><div><p>My technical work included microcontroller and sensor integration, data acquisition and troubleshooting between the electronic system and host computer.</p><p>I wrote Python software to log experimental signals at approximately 15 samples per second and built a graphical interface for operating the measurement workflow. The software was packaged as a Windows executable so it could be used without a Python development environment at the workstation.</p></div>
-<div class="case-technical-panel"><p class="eyebrow">MEASUREMENT PIPELINE</p><div class="case-flow"><span>Sensor signals</span><span>Microcontroller</span><span>Python logger</span></div></div></div></section>
-<section class="case-section"><h2>Engineering considerations</h2><div class="perifuse-grid">
-<div class="perifuse-panel"><h3>Repeatable measurements</h3><p>Consistent data capture and readable outputs were important to the experimental use of the apparatus.</p></div>
-<div class="perifuse-panel"><h3>Laboratory usability</h3><p>Interface design and packaging were aimed at making data collection practical for research users rather than only developers.</p></div></div></section>
-<section class="case-section"><h2>Research communication</h2><p>Work from the ophthalmology research environment contributed to professional presentation materials associated with ISER and BrightFocus. Photographs or software screenshots can be added after confirming which materials are appropriate for public display.</p></section>
-<p class="case-back"><a class="back-button" href="../projects.html">← Back to Projects</a></p></main><footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer></body></html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171a1d">
+<meta name="description" content="Ophthalmic instrumentation research: microcontroller sensor acquisition, ocular flow and pressure measurement, and Python/Tkinter live plotting and CSV logging.">
+<title>Ophthalmic Instrumentation Research | Joseph A. Groom</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<link rel="icon" href="../assets/circuit-monogram.png">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="../projects.html" aria-current="page">Projects</a>
+<a href="../resume.html">Resume</a>
+<a href="../contact.html">Contact</a>
+</div></nav>
+<main class="portfolio-case ophthalmic-case">
+<p class="eyebrow">UNIVERSITY OF SOUTH FLORIDA · OPHTHALMOLOGY RESEARCH</p>
+<h1>Ophthalmic Instrumentation &amp; Data Acquisition</h1>
+<p class="case-lead">Developing electronic measurement and Python desktop tools for experimental ocular fluid-flow and pressure studies, from sensor interfacing to live visualization and saved data.</p>
+<div class="tag-row"><span>Embedded C/C++</span><span>I²C</span><span>Analog Sensors</span><span>Serial Communication</span><span>Python / Tkinter</span><span>Matplotlib</span><span>CSV Logging</span></div>
+<p class="case-link-row"><a class="cta-button" href="https://github.com/Oupobopoc-C6H6/ophthalmic-instrumentation" target="_blank" rel="noopener noreferrer">View Firmware and GUI on GitHub ↗</a></p>
+<figure class="ophth-hero">
+<a href="../assets/projects/ophthalmology-instrumentation/gui-sample-output.png" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/ophthalmology-instrumentation/gui-sample-output.png" alt="Four panels of time-series measurements showing flow leaving the eye, a zero-filled second flow channel, intraocular pressure, and a zero-filled second pressure channel" loading="eager"></a>
+<figcaption>Captured logger output showing one active flow channel and one active pressure channel. The two unused channels are zero-filled placeholders, not additional measurements. Select to enlarge.</figcaption>
+</figure>
+<div class="case-metrics">
+<div><strong>I²C + ADC</strong><span>Fluid-flow and pressure-sensor interfaces</span></div>
+<div><strong>Python GUI</strong><span>Live graphs, serial port selection, and CSV export</span></div>
+<div><strong>2 architectures</strong><span>Single-controller experimental configuration and expanded dual-controller development</span></div>
+</div>
+<section class="case-section"><h2>Research application</h2>
+<p>In the USF ophthalmology research laboratory, I worked on instrumentation supporting experimental measurements of intraocular pressure and ocular fluid flow. My contributions focused on the embedded acquisition and desktop software needed to read sensors, monitor signals as experiments progressed, and preserve the time-series data for later review.</p>
+<p>The system was developed for experimental research, not as a clinical diagnostic or patient-monitoring instrument. Accurate sensor configuration, calibration, timing, and interpretation of channel units depend on the connected hardware.</p></section>
+<section class="case-section"><h2>Single-controller acquisition</h2>
+<div class="case-split">
+<div>
+<p>The single-controller version reads one I²C flow sensor and one analog pressure sensor through an Arduino-compatible microcontroller. Flow and pressure are transmitted over one USB serial connection at 115200 baud to a Python/Tkinter logger.</p>
+<p>For compatibility with the four-channel interface, the firmware sends two additional zero placeholders. Existing experimental data with one populated flow and one populated pressure trace is consistent with this architecture, although the exact flashed firmware and executable revision for each experiment have not been independently confirmed.</p>
+<p><a href="https://github.com/Oupobopoc-C6H6/ophthalmic-instrumentation/tree/main/single-controller" target="_blank" rel="noopener noreferrer">Explore the single-controller source ↗</a></p>
+</div>
+<div class="case-technical-panel ophthalmic-diagram">
+<p class="eyebrow">EXPERIMENTAL DATA PATH</p>
+<div class="ophth-inputs"><span>I²C flow sensor</span><span>Analog pressure sensor</span></div>
+<div class="ophth-down-arrow" aria-hidden="true">↓</div>
+<div class="ophth-node ophth-node-active">Arduino-compatible controller</div>
+<div class="ophth-down-arrow" aria-hidden="true">↓</div>
+<div class="ophth-node">USB serial (115200 baud)</div>
+<div class="ophth-down-arrow" aria-hidden="true">↓</div>
+<div class="ophth-node">Tkinter GUI · Live plots · CSV</div>
+</div></div></section>
+<section class="case-section"><h2>Expanded dual-controller development</h2>
+<div class="case-split">
+<div>
+<p>An expanded design explored two flow channels and two pressure channels. The intended architecture placed the two I²C flow sensors on separate ESP32 buses so identical sensor addresses would not conflict. An Arduino-compatible controller handled two analog pressure signals.</p>
+<p>The Python application receives separate USB serial streams and combines the latest available values into a four-panel display and timestamped CSV. These readings are not hardware-synchronized across the controllers.</p>
+<p><strong>Development status:</strong> This architecture is preserved as an alternative implementation. The published ESP32 firmware contains known issues and the complete four-sensor setup has not been independently established as the system used for recorded experiments.</p>
+<p><a href="https://github.com/Oupobopoc-C6H6/ophthalmic-instrumentation/tree/main/dual-controller" target="_blank" rel="noopener noreferrer">Explore the dual-controller source ↗</a></p>
+</div>
+<div class="case-technical-panel ophthalmic-diagram">
+<p class="eyebrow">ALTERNATIVE ARCHITECTURE</p>
+<div class="ophth-dual">
+<div><span class="ophth-node ophth-node-small">2 × I²C flow</span><span class="ophth-down-arrow" aria-hidden="true">↓</span><span class="ophth-node ophth-node-active">ESP32</span></div>
+<div><span class="ophth-node ophth-node-small">2 × pressure</span><span class="ophth-down-arrow" aria-hidden="true">↓</span><span class="ophth-node ophth-node-active">Arduino</span></div>
+</div>
+<div class="ophth-down-arrow" aria-hidden="true">↓ two serial connections ↓</div>
+<div class="ophth-node">Python GUI · Four plots · CSV</div>
+</div></div></section>
+<section class="case-section"><h2>Desktop application and data review</h2>
+<p>I developed the desktop application around practical laboratory needs: selecting COM ports, starting and stopping acquisition, viewing numeric readings alongside scrolling Matplotlib plots, adjusting the displayed time window, and saving timestamped datasets. The implementations use Tkinter, PySerial and Matplotlib.</p>
+<div class="perifuse-grid">
+<div class="perifuse-panel"><h3>Real-time visibility</h3><p>A four-panel plotting layout makes changing flow and pressure signals observable during an experiment. The provided sample demonstrates how unused channels remain at their placeholder values in the single-controller setup.</p></div>
+<div class="perifuse-panel"><h3>Exportable measurements</h3><p>Measurements can be saved as dated CSV files with flow and pressure columns. The dual-controller logger targets one output row every 100 ms using the latest readings, but that is not a guarantee of synchronized sensor sampling.</p></div>
+</div>
+</section>
+<section class="case-section"><h2>Experimental setup</h2>
+<div class="ophth-lab-layout">
+<figure class="ophth-lab-photo">
+<a href="../assets/projects/ophthalmology-instrumentation/experimental-setup.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/ophthalmology-instrumentation/experimental-setup.jpg" alt="Laboratory rat in an ocular experimental setup with tubing, fluid connectors, wires and measurement hardware" loading="lazy"></a>
+<figcaption>Laboratory ocular instrumentation setup showing fluid connections and experimental hardware. Image included as research context, not evidence of a particular sensor configuration.</figcaption>
+</figure>
+<div><h3>Connecting electronics to experiments</h3><p>The instrumentation work sits between physical experimental hardware and usable digital measurements. Fluid connections, electronic sensor interfaces, serial communication and desktop software all need to function together to support repeatable measurements.</p>
+<p>Using the acquisition tools in a research setting also informed how the interface presented readings and how data were recorded for subsequent analysis.</p>
+<p>Research from this environment contributed to materials presented in ophthalmology research forums, including ISER and BrightFocus-related work.</p></div>
+</div></section>
+<section class="case-section"><h2>Engineering limitations and next steps</h2>
+<p>The preserved repository contains research-era implementations rather than a single fully validated release. Sensor scale factors and flow units require confirmation against the installed flow sensors, and the dual-controller version needs firmware corrections and hardware verification before use. The GUI code would also benefit from routing worker-thread updates through Tkinter's main event loop.</p>
+<p>The repository includes separate README files and firmware/software for each implementation, allowing the hardware architectures and known limitations to be reviewed independently.</p>
+<a class="cta-button secondary" href="https://github.com/Oupobopoc-C6H6/ophthalmic-instrumentation" target="_blank" rel="noopener noreferrer">Explore the Ophthalmic Instrumentation Repository ↗</a>
+</section>
+<p class="case-back"><a class="back-button" href="../projects.html">← Back to Projects</a></p></main>
+<footer><p>2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
+</body>
+</html>
