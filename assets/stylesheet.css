@@ -283,3 +283,15 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
 .portfolio-case .case-back{margin-top:30px}
 @media(max-width:850px){.portfolio-case .case-split{grid-template-columns:1fr}.portfolio-case .case-metrics{grid-template-columns:1fr}}
 @media(max-width:680px){.project-img.technical-illustration{width:100%;min-height:140px}}
+
+/* Home page: one flagship case study followed by two selected projects. */
+.featured-grid-select{grid-template-columns:repeat(2,minmax(0,1fr));}
+.featured-grid-select .feature-image{aspect-ratio:16/8;}
+.featured-grid-select .feature-graphic .technical-illustration{min-height:190px;}
+.sunscream-illustration{background:radial-gradient(circle at 45% 25%,#3d4132 0%,#242c2d 52%,#171e23 100%);}
+.source-link{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--muted);text-decoration:underline;text-underline-offset:3px;}
+.source-link:hover,.project-source-link:hover{color:var(--accent);}
+.project-action-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.project-source-link{color:var(--accent);font-weight:650;text-decoration:underline;text-underline-offset:3px;}
+.case-link-row{margin:22px 0 12px;}
+@media(max-width:680px){.featured-grid-select{grid-template-columns:1fr;}.featured-grid-select .feature-graphic .technical-illustration{min-height:170px;}}
