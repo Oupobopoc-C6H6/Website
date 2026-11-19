@@ -21,27 +21,27 @@
   <p class="eyebrow">MEDICAL DEVICE DEVELOPMENT · IN COLLABORATION WITH MOFFITT CANCER CENTER</p>
   <h1>PERIFUSE</h1>
   <p class="hero-role">A wearable platform for localized immune cell delivery</p>
-  <p class="perifuse-intro">Developed in collaboration with Moffitt Cancer Center through the University of South Florida, PERIFUSE explores the controlled delivery of immune cells through a compact, wearable, battery-powered device. My work brought together embedded electronics, custom PCB development, firmware, electrical integration, and experimental testing.</p>
+  <p class="perifuse-intro">Developed in collaboration with Moffitt Cancer Center through the University of South Florida, PERIFUSE explores the controlled delivery of immune cells through a compact, wearable, battery-powered device. My contributions focused on the custom controller electronics, PCB layout and assembly, embedded firmware, power characterization, and electrical integration and testing.</p>
   <div class="tag-row"><span>ATtiny1616</span><span>KiCad</span><span>Embedded C</span><span>Power Management</span><span>Piezoelectric Pump</span><span>SolidWorks</span><span>Cell Viability Testing</span><span>Soldering</span></div>
   <div class="perifuse-stats">
     <div class="perifuse-stat"><strong>17 × 12 mm</strong><span>Custom controller PCB footprint</span></div>
     <div class="perifuse-stat"><strong>150 mAh</strong><span>Li-ion battery capacity used in device design</span></div>
-    <div class="perifuse-stat"><strong>≥80%</strong><span>Cell viability criterion verified over 3 days</span></div>
+    <div class="perifuse-stat"><strong>72 h</strong><span>Confocal cell viability observations in treated resin</span></div>
   </div>
   <figure class="case-hero-image">
     <a href="../assets/projects/perifuse/printed-design.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/printed-design.jpg" alt="Photograph of a printed PERIFUSE design prototype" loading="eager"></a>
     <figcaption>Printed prototype hardware from the PERIFUSE development process.</figcaption>
   </figure>
-  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> Three-day cell viability testing met the stated criterion. The prototype is not a clinically approved device, and bench testing does not establish clinical efficacy.</p>
+  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> The report documents promising 72-hour imaging results in treated resin alongside limitations and failures in earlier experiments. The prototype has not undergone clinical validation.</p>
   <nav class="perifuse-toc" aria-label="Sections of this project">
     <a href="#challenge">Design challenge</a><a href="#electronics">Electronics</a><a href="#firmware">Firmware</a><a href="#mechanical">Mechanical design</a><a href="#testing">Testing</a><a href="#resources">Resources</a>
   </nav>
   <section id="challenge" class="perifuse-section">
     <h2>Engineering Challenge</h2>
-    <p>The project explored whether immune cells could be stored and delivered in small, scheduled doses using a portable, body-mounted system. Challenges included maintaining cell viability, controlling microfluidic delivery, minimizing device size and power demand, and selecting materials compatible with cell handling.</p>
+    <p>Developed by a University of South Florida engineering team with Moffitt Cancer Center mentorship, PERIFUSE explored whether immune cells could be stored and delivered in small, scheduled doses using a portable, body-mounted system. Challenges included maintaining cell viability, controlling microfluidic delivery, minimizing device size and power demand, and selecting materials compatible with cell handling.</p>
     <div class="perifuse-grid">
-      <div class="perifuse-panel"><h3>Core requirements</h3><ul><li>Three-day cell storage and dosing concept</li><li>At least 80% cell viability over three days (verified in testing)</li><li>Accurate, low-volume scheduled delivery</li><li>Wearable form factor and secure attachment</li><li>Cost, sterility, and material compatibility constraints</li></ul></div>
-      <div class="perifuse-panel"><h3>My technical contributions</h3><ul><li>Microcontroller selection, PCB design, component soldering, and power architecture</li><li>Embedded C firmware for low-duty-cycle dosing</li><li>Integration of pump, battery, and electromechanical components</li><li>System testing and design tradeoff evaluation</li></ul></div>
+      <div class="perifuse-panel"><h3>Core requirements</h3><ul><li>Three-day cell storage and dosing concept</li><li>At least 80% cell viability target, evaluated through biological and material testing</li><li>Accurate, low-volume scheduled delivery</li><li>Wearable form factor and secure attachment</li><li>Cost, sterility, and material compatibility constraints</li></ul></div>
+      <div class="perifuse-panel"><h3>My technical contributions</h3><ul><li>Microcontroller selection, PCB design, component soldering, and power architecture</li><li>Embedded C firmware for low-duty-cycle dosing</li><li>Electrical integration of the pump, battery, and actuation circuitry</li><li>Power measurements, pump characterization, and system troubleshooting</li></ul></div>
     </div>
   </section>
   <section id="electronics" class="perifuse-section">
@@ -80,30 +80,31 @@
     </div>
   </section>
   <section id="testing" class="perifuse-section">
-    <h2>Testing, Challenges &amp; Lessons Learned</h2>
-    <div class="perifuse-grid">
-      <div class="perifuse-panel"><h3>Cell handling &amp; viability</h3><p>Cell-handling studies included viability/counting methods and consideration of oxygen availability, temperature, and material interactions. Live/dead images can illustrate the experimental method; quantified outcomes should be shown only with their corresponding data, controls, and time points.</p></div>
-      <div class="perifuse-panel"><h3>Flow &amp; dosing</h3><p>Pump characterization examined short pumping intervals and the delivered fluid volumes. A calibration curve and a table of target versus measured volume would help substantiate dosing performance.</p></div>
-      <div class="perifuse-panel"><h3>Electrical &amp; thermal performance</h3><p>Power measurements and multi-channel temperature logging informed battery-life expectations and cell-storage conditions. An oscilloscope or current trace and a temperature time-series plot would provide strong evidence.</p></div>
-      <div class="perifuse-panel"><h3>Iterative problem solving</h3><p>Important engineering obstacles included resin cytotoxicity concerns, adhesive stability, fluid-path vacuum lock, pump reliability, and real-time-counter configuration. These tradeoffs are part of the project's engineering story, not details to omit.</p></div>
-    </div>
-    <h3>Additional experimental and simulation artifacts</h3>
-    <p>The images below document reservoir dye-handling demonstrations and fluid-flow simulations. They are not substitutes for quantitative cell viability or calibrated dosing results.</p>
-    <div class="case-gallery"><figure class="case-figure"><a href="../assets/projects/perifuse/media-storage-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/media-storage-dye-test.jpg" alt="Media storage part filled with colored liquid" loading="lazy"></a><figcaption>Media storage dye-handling demonstration.</figcaption></figure>
-<figure class="case-figure"><a href="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" alt="Sealed media reservoir containing colored liquid" loading="lazy"></a><figcaption>Sealed reservoir dye-handling demonstration.</figcaption></figure>
-<figure class="case-figure"><a href="../assets/projects/perifuse/tube-shear-simulation.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/tube-shear-simulation.jpg" alt="Computed tubing shear visualization" loading="lazy"></a><figcaption>Tubing shear simulation.</figcaption></figure>
-<figure class="case-figure case-animation"><div class="case-animation-stage"><img src="../assets/projects/perifuse/flow-simulation.gif" alt="Animated fluid-flow simulation of the PERIFUSE delivery path" loading="eager"></div><figcaption>Animated fluid-flow simulation.</figcaption></figure></div>
-  </section>
+<h2>Testing, Results &amp; Engineering Tradeoffs</h2>
+<p>The six prototype iterations investigated biological compatibility, pump control, power use and wearability. Results guided technical improvements but did not establish clinical performance of the integrated device.</p>
+<div class="perifuse-grid">
+<div class="perifuse-panel"><h3>72-hour cell viability imaging</h3><p>After earlier resin-associated cell death, the team compared post-processing approaches for Bioclear resin. Confocal imaging of Jurkat cells stained with CellTracker Green CMFDA and propidium iodide was collected at 0 and 72 hours. The final report describes approximately 90% green-stained cell area in its qualitative analysis of the acetone-treated resin, with viable, proliferating cells. This was a material-compatibility experiment, not a validated clinical or whole-device outcome.</p></div>
+<div class="perifuse-panel"><h3>Battery and low-power electronics</h3><p>RTC overflow interrupts and controller sleep reduced time spent in active operation. A one-day device test suggested approximately 5% battery use based on an estimated state of charge. The report projects about 10 days of practical operation, subject to battery-protection and measurement limitations, rather than reporting a completed 10-day endurance test.</p></div>
+<div class="perifuse-panel"><h3>Flow and localization</h3><p>Pump characterization investigated flow initiation and repeatability. In a silicone tissue-model experiment, a syringe pump delivered colored liquid at 0.3 mL/min, with localized fluid reported in 11 of 12 sampled regions. This evaluated a surrogate model, not delivery in living tissue.</p></div>
+<div class="perifuse-panel"><h3>Engineering obstacles</h3><p>Challenges included resin cytotoxicity, flow-path restrictions and vacuum lock, pump reliability, and real-time-counter configuration. The control firmware moved away from an unsuccessful periodic-interrupt approach to RTC overflow scheduling. Comfort testing with approximately 30 participants informed team revisions to attachment stability.</p></div>
+</div>
+<h3>Experimental and simulation imagery</h3><p>These images document dye handling and fluid modeling; they should not be interpreted as complete biological validation.</p>
+<div class="case-gallery">
+<figure class="case-figure"><a href="../assets/projects/perifuse/media-storage-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/media-storage-dye-test.jpg" alt="Media storage component containing colored liquid" loading="lazy"></a><figcaption>Media storage dye test.</figcaption></figure>
+<figure class="case-figure"><a href="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" alt="Sealed reservoir containing colored liquid" loading="lazy"></a><figcaption>Sealed reservoir dye test.</figcaption></figure>
+<figure class="case-figure"><a href="../assets/projects/perifuse/tube-shear-simulation.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/tube-shear-simulation.jpg" alt="Tubing shear simulation" loading="lazy"></a><figcaption>Tubing shear simulation.</figcaption></figure>
+<figure class="case-figure case-animation"><div class="case-animation-stage"><img src="../assets/projects/perifuse/flow-simulation.gif" alt="Animated fluid-flow simulation" loading="eager"></div><figcaption>Animated flow simulation.</figcaption></figure>
+</div></section>
   <section id="resources" class="perifuse-section">
     <h2>Supporting Materials</h2>
-    <p>The project poster and controller schematic are available below, along with the design and testing imagery on this page. Additional source files can be shared after they are organized and cleared for public release.</p>
+    <p>The university poster and schematic are linked below. This case study draws on the team's final design report; further sources can be added after review for public release.</p>
     <ul class="perifuse-roadmap">
       <li><strong>Project presentation:</strong> 40-minute design walkthrough; ideally include chapter timestamps and a short summary.</li>
       <li><strong>University poster:</strong> <a href="../assets/projects/perifuse/final-poster.png" target="_blank" rel="noopener noreferrer">View the full-resolution project poster (PNG)</a>. The poster opens separately rather than being embedded on this page.</li>
       <li><strong>Electronics:</strong> <a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer">Controller schematic image</a> and illustrated PCB layout above. KiCad source, Gerbers, and curated BOM can be linked after publication review.</li>
       <li><strong>Firmware:</strong> Embedded C source with a README explaining target MCU, toolchain, and scheduling architecture.</li>
       <li><strong>Mechanical:</strong> Assembly, chassis, and reservoir design drawings are illustrated above. Editable CAD or STEP exports can be linked once ready.</li>
-      <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; additional quantitative flow, power, and temperature data can be added with annotated results; three-day cell viability testing met the target.</li>
+      <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; the report describes 72-hour resin-compatibility imaging, battery measurements, and a tissue-model dye localization experiment. Full datasets can be published with appropriate context and permissions.</li>
     </ul>
     <p>For additional project documentation or implementation details, <a href="../contact.html">please reach out</a>.</p>
   </section>
