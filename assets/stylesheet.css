@@ -260,3 +260,176 @@ pre { max-width: 100%; overflow-x: auto; padding: 20px; background: #101519; bor
   .perifuse-main .case-figure > a,
   .perifuse-main .case-animation-stage { height: 255px; }
 }
+
+/* Project-rework case studies */
+.feature-graphic{display:flex;align-items:stretch;justify-content:center}
+.technical-illustration{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;padding:16px;min-height:145px;background:radial-gradient(circle at 30% 20%,#344047,#1a2127 70%);border-radius:8px}
+.technical-illustration span{border:1px solid #8f754e;background:#222a31;color:var(--text);border-radius:7px;padding:10px 12px;font-size:.79rem;font-weight:700;letter-spacing:.04em}
+.feature-graphic .technical-illustration{width:100%;height:100%;border-radius:0}
+.project-img.technical-illustration{width:min(32%,270px);flex-shrink:0;align-self:stretch}
+.portfolio-case .case-lead{font-size:1.15rem;color:var(--muted);max-width:80ch}
+.portfolio-case .case-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:28px 0}
+.portfolio-case .case-metrics>div{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:8px;padding:18px}
+.portfolio-case .case-metrics strong{display:block;color:var(--accent);font-size:1.25rem}
+.portfolio-case .case-metrics span{font-size:.83rem;color:var(--muted)}
+.portfolio-case .case-section{border-top:1px solid var(--border);padding-top:12px;margin-top:28px}
+.portfolio-case .case-section>p{max-width:none}
+.portfolio-case .case-split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px}
+.portfolio-case .case-technical-panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px}
+.portfolio-case .case-technical-panel .eyebrow{margin:0 0 15px}
+.portfolio-case .case-flow{display:flex;flex-wrap:wrap;gap:8px}
+.portfolio-case .case-flow span{flex:1 1 115px;display:flex;align-items:center;justify-content:center;text-align:center;min-height:65px;padding:10px;border:1px solid #746344;border-radius:7px;background:#182027;font-size:.84rem}
+.portfolio-case .case-flow-wide{margin:20px 0 24px}
+.portfolio-case .case-back{margin-top:30px}
+@media(max-width:850px){.portfolio-case .case-split{grid-template-columns:1fr}.portfolio-case .case-metrics{grid-template-columns:1fr}}
+@media(max-width:680px){.project-img.technical-illustration{width:100%;min-height:140px}}
+
+/* Home page: one flagship case study followed by two selected projects. */
+.featured-grid-select{grid-template-columns:repeat(2,minmax(0,1fr));}
+.featured-grid-select .feature-image{aspect-ratio:16/8;}
+.featured-grid-select .feature-graphic .technical-illustration{min-height:190px;}
+.sunscream-illustration{background:radial-gradient(circle at 45% 25%,#3d4132 0%,#242c2d 52%,#171e23 100%);}
+.source-link{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--muted);text-decoration:underline;text-underline-offset:3px;}
+.source-link:hover,.project-source-link:hover{color:var(--accent);}
+.project-action-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.project-source-link{color:var(--accent);font-weight:650;text-decoration:underline;text-underline-offset:3px;}
+.case-link-row{margin:22px 0 12px;}
+@media(max-width:680px){.featured-grid-select{grid-template-columns:1fr;}.featured-grid-select .feature-graphic .technical-illustration{min-height:170px;}}
+
+
+/* SunScream: fixed-width vertical signal paths with a true ESP32 output fork.
+   Scoped to this component so legacy project flow cards remain unchanged. */
+.sunscream-flow { margin: 0; width: 100%; min-width: 0; }
+.sunscream-flow > .eyebrow { margin: 0 0 20px; }
+.sunscream-flow .flow-node {
+  min-width: 0;
+  width: 100%;
+  min-height: 92px;
+  padding: 14px 12px;
+  border: 1px solid #876b3b;
+  border-radius: 10px;
+  background: #182127;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.sunscream-flow .flow-stage {
+  color: var(--accent);
+  font-size: .64rem;
+  letter-spacing: .12em;
+  font-weight: 800;
+}
+.sunscream-flow .flow-node strong {
+  color: var(--text);
+  font-size: clamp(.88rem, 1.15vw, 1rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.sunscream-flow .flow-node small {
+  color: var(--muted);
+  font-size: .75rem;
+  line-height: 1.4;
+}
+.sunscream-flow .flow-node-primary {
+  background: #273036;
+  border-color: var(--accent);
+}
+.sunscream-flow .flow-connector {
+  position: relative;
+  width: 2px;
+  height: 30px;
+  margin: 0 auto;
+  background: var(--accent);
+}
+.sunscream-flow .flow-connector::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 5px solid transparent;
+  border-bottom: 0;
+  border-top: 7px solid var(--accent);
+  transform: translate(-50%, 100%);
+}
+.sunscream-flow .flow-fork {
+  position: relative;
+  height: 44px;
+  margin: 0 25%;
+  border-bottom: 2px solid var(--accent);
+}
+.sunscream-flow .flow-fork::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 24px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+}
+.sunscream-flow .flow-outputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 19px;
+}
+.sunscream-flow .flow-outputs > .flow-node { position: relative; }
+.sunscream-flow .flow-outputs > .flow-node::before {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 2px;
+  top: -19px;
+  left: 50%;
+  background: var(--accent);
+}
+.sunscream-flow .flow-outputs > .flow-node::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border: 5px solid transparent;
+  border-top: 7px solid var(--accent);
+  border-bottom: 0;
+}
+.sunscream-flow .flow-note {
+  color: var(--muted);
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: .78rem;
+}
+@media (max-width: 540px) {
+  .sunscream-flow .flow-outputs { gap: 8px; }
+  .sunscream-flow .flow-outputs .flow-node { padding: 12px 8px; }
+  .sunscream-flow .flow-node strong { font-size: .86rem; }
+  .sunscream-flow .flow-node small { font-size: .68rem; }
+  .sunscream-flow .flow-stage { font-size: .58rem; letter-spacing: .07em; }
+}
+
+/* Ophthalmic instrumentation plots, experimental photograph and sensor architecture. */
+.ophth-feature-image,.ophth-project-image {background:#f3f4f5;}
+.ophth-feature-image img {object-fit:contain;background:#f3f4f5;padding:8px;}
+.project-img.ophth-project-image {object-fit:contain;padding:8px;}
+.ophthalmic-case .ophth-hero {margin:26px 0;overflow:hidden;border:1px solid var(--border);border-radius:11px;background:#f3f4f5;}
+.ophthalmic-case .ophth-hero a {display:block;padding:10px;}
+.ophthalmic-case .ophth-hero img {width:100%;max-height:580px;height:auto;object-fit:contain;}
+.ophthalmic-case .ophth-hero figcaption {padding:12px 17px;color:var(--muted);font-size:.85rem;background:var(--panel);line-height:1.5;}
+.ophthalmic-case .ophthalmic-diagram {text-align:center;}
+.ophthalmic-case .ophth-node,.ophthalmic-case .ophth-inputs span {display:flex;align-items:center;justify-content:center;padding:12px 10px;min-height:57px;border:1px solid #8c754d;border-radius:8px;background:#182127;color:var(--text);font-size:.86rem;line-height:1.35;text-align:center;}
+.ophthalmic-case .ophth-inputs {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+.ophthalmic-case .ophth-node-active {border-color:var(--accent);background:#283037;}
+.ophthalmic-case .ophth-down-arrow {color:var(--accent);text-align:center;padding:5px;font-size:1.45rem;line-height:1.3;}
+.ophthalmic-case .ophth-dual {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+.ophthalmic-case .ophth-dual > div {min-width:0;}
+.ophthalmic-case .ophth-node-small {min-height:60px;}
+.ophthalmic-case .ophth-lab-layout {display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(22px,3vw,34px);align-items:start;}
+.ophthalmic-case .ophth-lab-layout > div {min-width:0;}
+.ophthalmic-case .ophth-lab-photo {margin:0;overflow:hidden;border:1px solid var(--border);border-radius:10px;background:var(--panel);}
+.ophthalmic-case .ophth-lab-photo img {display:block;width:100%;max-height:430px;object-fit:contain;background:#172025;}
+.ophthalmic-case .ophth-lab-photo figcaption {padding:12px 15px;color:var(--muted);font-size:.82rem;line-height:1.5;}
+@media(max-width:850px){.ophthalmic-case .ophth-lab-layout{grid-template-columns:1fr;}}

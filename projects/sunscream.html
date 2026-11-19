@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171a1d">
+<meta name="description" content="SunScream UV sensor project featuring ESP32 Bluetooth UV exposure monitoring and a separate ATmega328P Python desktop sunscreen comparison application.">
+<title>SunScream UV Sensing | Joseph A. Groom</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<link rel="icon" href="../assets/circuit-monogram.png">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="../projects.html" aria-current="page">Projects</a>
+<a href="../resume.html">Resume</a>
+<a href="../contact.html">Contact</a>
+</div></nav>
+<main class="portfolio-case">
+<p class="eyebrow">EMBEDDED SENSING · INSTRUMENTATION · PYTHON</p>
+<h1>SunScream</h1>
+<p class="case-lead">Two UV-sensing prototypes exploring embedded sensor acquisition and different ways to work with the data: accumulated exposure alerts and desktop sunscreen-sample comparison.</p>
+<div class="tag-row"><span>ESP32-WROOM-32</span><span>ATmega328P</span><span>GUVA UV Sensor</span><span>Bluetooth Serial</span><span>Python/Tkinter</span><span>KiCad</span><span>Embedded C/C++</span></div>
+<p class="case-link-row"><a class="cta-button" href="https://github.com/Oupobopoc-C6H6/SunScream" target="_blank" rel="noopener noreferrer">Explore Source on GitHub ↗</a></p>
+<div class="case-metrics">
+<div><strong>2 builds</strong><span>Independent hardware and firmware implementations</span></div>
+<div><strong>ESP32</strong><span>Wireless monitoring and audible threshold alert</span></div>
+<div><strong>ATmega328P</strong><span>USB serial sensor and Python desktop GUI</span></div>
+</div>
+<section class="case-section"><h2>One sensing concept, two applications</h2>
+<p>SunScream was developed through two separate engineering course projects at the University of South Florida. Both use a GUVA-series UV sensor, but they are not two modes of one finished device. The hardware platforms, interfaces, and firmware differ.</p>
+<div class="perifuse-grid">
+<div class="perifuse-panel"><h3>UV exposure monitor</h3>
+<p>The ESP32-based implementation sampled the UV sensor, used an empirical relationship to estimate UV conditions, accumulated an exposure estimate over time, and sounded a buzzer when an experimental threshold was exceeded. Readings were sent wirelessly to an Android Bluetooth serial terminal.</p></div>
+<div class="perifuse-panel"><h3>Sunscreen comparison interface</h3>
+<p>The ATmega328P implementation supplied UV sensor measurements to a Python/Tkinter desktop application over serial. The user recorded an initial baseline, then a sunscreen-treated sample measurement; the interface calculated the relative reduction in sensor response.</p></div>
+</div></section>
+<section class="case-section"><h2>ESP32 wireless exposure monitor</h2>
+<div class="case-split"><div>
+<p>This version integrates an ESP32-WROOM-32, GUVA-S12SD UV sensor, and an active buzzer. Firmware samples an ADC input, applies the calibration relationship developed during testing, and accumulates an estimated exposure value at regular intervals.</p>
+<p>The device transmits measurement and accumulation values using Bluetooth Serial. The buzzer provides an audible warning after the accumulated estimate crosses a fixed experimental threshold. Outdoor characterization also explored how ADC measurements related to reported UV Index values.</p>
+<p>Work in the repository includes embedded firmware, mechanical CAD, circuit design files, and the engineering team report. The published design is a prototype rather than a calibrated personal-exposure instrument.</p>
+</div>
+<div class="case-technical-panel">
+  <figure class="sunscream-flow" aria-label="GUVA UV sensor sends an analog reading to the ESP32. The ESP32 calculates an exposure estimate and sends readings to an Android terminal over Bluetooth while also controlling a threshold buzzer.">
+    <figcaption class="eyebrow">WIRELESS DATA FLOW</figcaption>
+    <div class="flow-node">
+      <span class="flow-stage">SENSOR INPUT</span>
+      <strong>GUVA UV sensor</strong>
+      <small>Analog UV response</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node flow-node-primary">
+      <span class="flow-stage">PROCESSING</span>
+      <strong>ESP32-WROOM-32</strong>
+      <small>ADC, UV estimate, accumulated exposure</small>
+    </div>
+    <div class="flow-fork" aria-hidden="true"></div>
+    <div class="flow-outputs">
+      <div class="flow-node">
+        <span class="flow-stage">WIRELESS OUTPUT</span>
+        <strong>Bluetooth Serial</strong>
+        <small>Android terminal readings</small>
+      </div>
+      <div class="flow-node">
+        <span class="flow-stage">LOCAL OUTPUT</span>
+        <strong>Buzzer alert</strong>
+        <small>Exposure threshold exceeded</small>
+      </div>
+    </div>
+  </figure>
+</div></div>
+<p><a href="https://github.com/Oupobopoc-C6H6/SunScream/tree/main/esp32-exposure-monitor" target="_blank" rel="noopener noreferrer">View the ESP32 implementation on GitHub ↗</a></p>
+</section>
+<section class="case-section"><h2>ATmega328P sunscreen analyzer</h2>
+<div class="case-split"><div>
+<p>The second implementation uses an ATmega328P to read the UV sensor and respond to measurement requests from a Python desktop application. The Tkinter GUI displays the baseline and experimental readings and their relative percentage difference.</p>
+<p>The desktop software sends a serial request, receives a numeric sensor reading, and compares the second reading to the baseline:</p>
+<pre><code>UV signal reduction (%) =
+    (1 - test_reading / baseline_reading) * 100</code></pre>
+<p>Alongside the Python GUI, the repository includes microcontroller firmware and KiCad PCB files. This version does not incorporate the ESP32's Bluetooth alarm functionality.</p>
+</div>
+<div class="case-technical-panel">
+  <figure class="sunscream-flow" aria-label="The GUVA UV sensor feeds the ATmega328P analog input. The microcontroller sends measurements over a wired serial connection to a Python Tkinter application for baseline and sunscreen sample comparison.">
+    <figcaption class="eyebrow">DESKTOP DATA FLOW</figcaption>
+    <div class="flow-node">
+      <span class="flow-stage">SENSOR INPUT</span>
+      <strong>GUVA UV sensor</strong>
+      <small>Analog measurement</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node flow-node-primary">
+      <span class="flow-stage">ACQUISITION</span>
+      <strong>ATmega328P</strong>
+      <small>ADC sampling on request</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node">
+      <span class="flow-stage">COMMUNICATION</span>
+      <strong>USB / Serial</strong>
+      <small>Measurement response to PC</small>
+    </div>
+    <div class="flow-connector" aria-hidden="true"></div>
+    <div class="flow-node">
+      <span class="flow-stage">ANALYSIS</span>
+      <strong>Python / Tkinter GUI</strong>
+      <small>Baseline vs. sunscreen sample</small>
+    </div>
+    <p class="flow-note">The GUI requests readings over the same serial link.</p>
+  </figure>
+</div></div>
+<p><a href="https://github.com/Oupobopoc-C6H6/SunScream/tree/main/atmega328p-sunscreen-analyzer" target="_blank" rel="noopener noreferrer">View the ATmega328P implementation on GitHub ↗</a></p>
+</section>
+<section class="case-section"><h2>Testing and limitations</h2>
+<p>The UV exposure implementation uses an empirical sensor calibration, and the project documentation notes substantial variability in outdoor measurements, particularly at low reported UV Index values. The accumulated reading is therefore an experimental estimate rather than a validated UV dose.</p>
+<p>The desktop application's percentage is a <strong>relative measured signal reduction</strong>, not a certified sunscreen SPF rating. The preserved GUI implementation also has practical limitations, including a hard-coded serial port and single-measurement comparisons without uncertainty estimates.</p>
+<p>Together, these builds demonstrate sensor interfacing, ADC acquisition, embedded firmware, Bluetooth communication, serial protocols, Python GUI development, and documenting the difference between a working prototype and a calibrated instrument.</p></section>
+<section class="case-section"><h2>Project files</h2>
+<p>The GitHub repository contains source code and engineering resources for both builds, including the ESP32 firmware and CAD, the ATmega328P firmware and PCB design, the Python GUI, and supporting documentation.</p>
+<a class="cta-button secondary" href="https://github.com/Oupobopoc-C6H6/SunScream" target="_blank" rel="noopener noreferrer">View the SunScream Repository ↗</a>
+</section>
+<p class="case-back"><a href="../projects.html" class="back-button">← Back to Projects</a></p>
+</main>
+<footer><p>2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
+</body></html>
