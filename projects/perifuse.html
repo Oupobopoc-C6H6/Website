@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171a1d">
+<meta name="description" content="PERIFUSE is a wearable immune cell delivery device prototype developed in collaboration with Moffitt Cancer Center, integrating custom PCB design, embedded firmware, and mechanical engineering.">
+<title>PERIFUSE | Joseph A. Groom</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<link rel="icon" href="../assets/circuit-monogram.png">
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
+  <div class="nav-links">
+    <a href="../index.html">Home</a><a href="../about.html">About</a>
+    <a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a>
+  </div>
+</nav>
+<main class="perifuse-main">
+  <p class="eyebrow">MEDICAL DEVICE DEVELOPMENT · IN COLLABORATION WITH MOFFITT CANCER CENTER</p>
+  <h1>PERIFUSE</h1>
+  <p class="hero-role">A wearable platform for localized immune cell delivery</p>
+  <p class="perifuse-intro">Developed in collaboration with Moffitt Cancer Center through the University of South Florida, PERIFUSE explores the controlled delivery of immune cells through a compact, wearable, battery-powered device. My work brought together embedded electronics, custom PCB development, firmware, electrical integration, and experimental testing.</p>
+  <div class="tag-row"><span>ATtiny1616</span><span>KiCad</span><span>Embedded C</span><span>Power Management</span><span>Piezoelectric Pump</span><span>SolidWorks</span><span>Cell Viability Testing</span><span>Soldering</span></div>
+  <div class="perifuse-stats">
+    <div class="perifuse-stat"><strong>17 × 12 mm</strong><span>Custom controller PCB footprint</span></div>
+    <div class="perifuse-stat"><strong>150 mAh</strong><span>Li-ion battery capacity used in device design</span></div>
+    <div class="perifuse-stat"><strong>≥80%</strong><span>Cell viability criterion verified over 3 days</span></div>
+  </div>
+  <figure class="case-hero-image">
+    <a href="../assets/projects/perifuse/printed-design.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/printed-design.jpg" alt="Photograph of a printed PERIFUSE design prototype" loading="eager"></a>
+    <figcaption>Printed prototype hardware from the PERIFUSE development process.</figcaption>
+  </figure>
+  <p class="perifuse-maturity"><strong>Prototype / research-stage concept.</strong> Three-day cell viability testing met the stated criterion. The prototype is not a clinically approved device, and bench testing does not establish clinical efficacy.</p>
+  <nav class="perifuse-toc" aria-label="Sections of this project">
+    <a href="#challenge">Design challenge</a><a href="#electronics">Electronics</a><a href="#firmware">Firmware</a><a href="#mechanical">Mechanical design</a><a href="#testing">Testing</a><a href="#resources">Resources</a>
+  </nav>
+  <section id="challenge" class="perifuse-section">
+    <h2>Engineering Challenge</h2>
+    <p>The project explored whether immune cells could be stored and delivered in small, scheduled doses using a portable, body-mounted system. Challenges included maintaining cell viability, controlling microfluidic delivery, minimizing device size and power demand, and selecting materials compatible with cell handling.</p>
+    <div class="perifuse-grid">
+      <div class="perifuse-panel"><h3>Core requirements</h3><ul><li>Three-day cell storage and dosing concept</li><li>At least 80% cell viability over three days (verified in testing)</li><li>Accurate, low-volume scheduled delivery</li><li>Wearable form factor and secure attachment</li><li>Cost, sterility, and material compatibility constraints</li></ul></div>
+      <div class="perifuse-panel"><h3>My technical contributions</h3><ul><li>Microcontroller selection, PCB design, component soldering, and power architecture</li><li>Embedded C firmware for low-duty-cycle dosing</li><li>Integration of pump, battery, and electromechanical components</li><li>System testing and design tradeoff evaluation</li></ul></div>
+    </div>
+  </section>
+  <section id="electronics" class="perifuse-section">
+    <h2>Embedded Electronics &amp; PCB Development</h2>
+    <p>I developed a compact <strong>17 × 12 mm custom PCB</strong> built around the <strong>ATtiny1616</strong> microcontroller. The system used a 150 mAh single-cell Li-ion battery, a regulated 5 V supply for the piezoelectric pump, and a MOSFET switching stage. Component selection and board layout balanced size, electrical requirements, manufacturability, and low standby power.</p>
+    <div class="case-gallery case-gallery-three">
+      <figure class="case-figure"><a href="../assets/projects/perifuse/pcb-layout.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/pcb-layout.jpg" alt="KiCad PCB layout of the PERIFUSE controller" loading="lazy"></a><figcaption>Custom controller PCB layout.</figcaption></figure>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/manufactured-pcb.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/manufactured-pcb.jpg" alt="Manufactured PERIFUSE PCB shown beside a US quarter" loading="lazy"></a><figcaption>Manufactured controller PCB beside a US quarter for scale.</figcaption></figure>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/pcb-schematic.jpg" alt="Complete PERIFUSE controller schematic" loading="lazy"></a><figcaption>Controller circuit schematic. Select to open the full-resolution image.</figcaption></figure>
+    </div>
+  </section>
+  <section id="firmware" class="perifuse-section">
+    <h2>Embedded Firmware &amp; Power Management</h2>
+    <div class="case-split">
+      <div class="case-split-copy">
+        <p>I wrote embedded C firmware for the ATtiny1616, using its low-frequency real-time counter to schedule pump operation while placing the controller into a low-power sleep state between events.</p>
+        <p>Short active pumping intervals and long idle periods addressed the project's intermittent dosing requirements. The flowchart shows the control sequence and scheduling logic. The source code can be linked after the public repository is ready.</p>
+      </div>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/firmware-flowchart.png" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/firmware-flowchart.png" alt="PERIFUSE firmware control flowchart showing pump scheduling" loading="lazy"></a><figcaption>Firmware control flow and pump scheduling.</figcaption></figure>
+    </div>
+  </section>
+  <section id="mechanical" class="perifuse-section">
+    <h2>Mechanical &amp; Fluidic Integration</h2>
+    <div class="case-split">
+      <div class="case-split-copy">
+        <p>The project team developed multiple enclosure and chamber prototypes to address component fit, tubing routing, adhesive stability, and fabrication constraints. My focus was on integrating the electronics, pump, and electrical connections with the overall device.</p>
+        <p>The fluid path combined a cell chamber with pump-driven delivery. Testing considered oxygen exchange through a thin PDMS membrane, material compatibility, and flow restrictions. Later revisions addressed comfort feedback and pump and fluid-path issues.</p>
+      </div>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/assembly-diagram.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/assembly-diagram.jpg" alt="PERIFUSE CAD assembly showing the mechanical and electronic components" loading="lazy"></a><figcaption>Overall device assembly developed by the project team.</figcaption></figure>
+    </div>
+    <h3>Component designs</h3>
+    <div class="case-gallery case-gallery-three">
+      <figure class="case-figure"><a href="../assets/projects/perifuse/chassis-diagram.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/chassis-diagram.jpg" alt="CAD schematic of the wearable chassis" loading="lazy"></a><figcaption>Wearable chassis design.</figcaption></figure>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/media-reservoir-diagram.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/media-reservoir-diagram.jpg" alt="CAD drawing of the media reservoir" loading="lazy"></a><figcaption>Media reservoir component.</figcaption></figure>
+      <figure class="case-figure"><a href="../assets/projects/perifuse/media-storage-diagram.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/media-storage-diagram.jpg" alt="CAD drawing of the media storage component" loading="lazy"></a><figcaption>Media storage component.</figcaption></figure>
+    </div>
+  </section>
+  <section id="testing" class="perifuse-section">
+    <h2>Testing, Challenges &amp; Lessons Learned</h2>
+    <div class="perifuse-grid">
+      <div class="perifuse-panel"><h3>Cell handling &amp; viability</h3><p>Cell-handling studies included viability/counting methods and consideration of oxygen availability, temperature, and material interactions. Live/dead images can illustrate the experimental method; quantified outcomes should be shown only with their corresponding data, controls, and time points.</p></div>
+      <div class="perifuse-panel"><h3>Flow &amp; dosing</h3><p>Pump characterization examined short pumping intervals and the delivered fluid volumes. A calibration curve and a table of target versus measured volume would help substantiate dosing performance.</p></div>
+      <div class="perifuse-panel"><h3>Electrical &amp; thermal performance</h3><p>Power measurements and multi-channel temperature logging informed battery-life expectations and cell-storage conditions. An oscilloscope or current trace and a temperature time-series plot would provide strong evidence.</p></div>
+      <div class="perifuse-panel"><h3>Iterative problem solving</h3><p>Important engineering obstacles included resin cytotoxicity concerns, adhesive stability, fluid-path vacuum lock, pump reliability, and real-time-counter configuration. These tradeoffs are part of the project's engineering story, not details to omit.</p></div>
+    </div>
+    <h3>Additional experimental and simulation artifacts</h3>
+    <p>The images below document reservoir dye-handling demonstrations and fluid-flow simulations. They are not substitutes for quantitative cell viability or calibrated dosing results.</p>
+    <div class="case-gallery"><figure class="case-figure"><a href="../assets/projects/perifuse/media-storage-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/media-storage-dye-test.jpg" alt="Media storage part filled with colored liquid" loading="lazy"></a><figcaption>Media storage dye-handling demonstration.</figcaption></figure>
+<figure class="case-figure"><a href="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/sealed-reservoir-dye-test.jpg" alt="Sealed media reservoir containing colored liquid" loading="lazy"></a><figcaption>Sealed reservoir dye-handling demonstration.</figcaption></figure>
+<figure class="case-figure"><a href="../assets/projects/perifuse/tube-shear-simulation.jpg" target="_blank" rel="noopener noreferrer"><img src="../assets/projects/perifuse/tube-shear-simulation.jpg" alt="Computed tubing shear visualization" loading="lazy"></a><figcaption>Tubing shear simulation.</figcaption></figure>
+<figure class="case-figure case-animation"><div class="case-animation-stage"><img src="../assets/projects/perifuse/flow-simulation.gif" alt="Animated fluid-flow simulation of the PERIFUSE delivery path" loading="eager"></div><figcaption>Animated fluid-flow simulation.</figcaption></figure></div>
+  </section>
+  <section id="resources" class="perifuse-section">
+    <h2>Supporting Materials</h2>
+    <p>The project poster and controller schematic are available below, along with the design and testing imagery on this page. Additional source files can be shared after they are organized and cleared for public release.</p>
+    <ul class="perifuse-roadmap">
+      <li><strong>Project presentation:</strong> 40-minute design walkthrough; ideally include chapter timestamps and a short summary.</li>
+      <li><strong>University poster:</strong> <a href="../assets/projects/perifuse/final-poster.png" target="_blank" rel="noopener noreferrer">View the full-resolution project poster (PNG)</a>. The poster opens separately rather than being embedded on this page.</li>
+      <li><strong>Electronics:</strong> <a href="../assets/projects/perifuse/pcb-schematic.jpg" target="_blank" rel="noopener noreferrer">Controller schematic image</a> and illustrated PCB layout above. KiCad source, Gerbers, and curated BOM can be linked after publication review.</li>
+      <li><strong>Firmware:</strong> Embedded C source with a README explaining target MCU, toolchain, and scheduling architecture.</li>
+      <li><strong>Mechanical:</strong> Assembly, chassis, and reservoir design drawings are illustrated above. Editable CAD or STEP exports can be linked once ready.</li>
+      <li><strong>Validation:</strong> Reservoir dye photographs and flow simulations are shown above; additional quantitative flow, power, and temperature data can be added with annotated results; three-day cell viability testing met the target.</li>
+    </ul>
+    <p>For additional project documentation or implementation details, <a href="../contact.html">please reach out</a>.</p>
+  </section>
+  <p><a class="back-button" href="../projects.html">← Back to Projects</a></p>
+</main>
+<footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
+</body>
+</html>

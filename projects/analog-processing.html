@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed information about the Gru-mobile project by Joseph Groom">
+    <meta name="theme-color" content="#171a1d">
+    <meta name="description" content="Analog filtering and pulse oximetry electronics project by Joseph A. Groom">
     <title>Analog Signal Processing - Joseph Groom</title>
     <link rel="stylesheet" href="../assets/stylesheet.css">
-    <link rel="icon" href="../assets/Icon.png">
+    <link rel="icon" href="../assets/circuit-monogram.png">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <a class="nav-button" href="../index.html">Home</a>
-        <a class="nav-button" href="../about.html">About Me</a>
-        <a class="nav-button" href="../projects.html">Projects</a>
-        <a class="nav-button" href="../resume.html">Resume</a>
-        <a class="nav-button" href="../contact.html">Contact</a>
-    </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html" aria-current="page">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
 
     <!-- Main Content -->
     <main>
@@ -30,12 +34,12 @@
             <p>
                 The goal of Pulse Oximetery was to develop a cost-effective, analog signal processing circuit that reduces noise in pulse oximeter signals 
                 while preserving critical physiological data. Starting from a basic pulse oximeter design using a red LED and a photoresistor to capture raw data, 
-                I focused on mitigating common noise sources—such as motion artifacts, ambient light, and electronic interference—without filtering out biologically significant changes.
+                I focused on mitigating common noise sources,such as motion artifacts, ambient light, and electronic interference,without filtering out biologically significant changes.
             </p>
             <p>
                 To achieve this, I designed and simulated a second-order low-pass filter using inexpensive RC components and operational amplifiers in LTspice. 
                 This analog approach allowed for effective attenuation of high-frequency noise while maintaining the integrity of the low-frequency heartbeat. 
-                The iterative process—balancing performance with component cost—resulted in a circuit that reliably amplifies the desired signal within the constraints of a tight budget.
+                The iterative process,balancing performance with component cost,resulted in a circuit that reliably amplifies the desired signal within the constraints of a tight budget.
             </p>
             <p>
                 Ultimately, this project showcases my expertise in analog circuit design and biomedical signal processing, 
@@ -84,11 +88,11 @@
             <div class="image-container">
                 <div class="image-box">
                     <h3>Before Filtering</h3>
-                    <img src="project_assets/before.jpg" alt="Raw Signal">
+                    <img src="../assets/projects/analog-processing/signal-before.jpg" alt="Raw Signal">
                 </div>
                 <div class="image-box">
                     <h3>After Filtering</h3>
-                    <img src="project_assets/after.jpg" alt="Filtered Signal">
+                    <img src="../assets/projects/analog-processing/signal-after.jpg" alt="Filtered Signal">
                 </div>
             </div>
         </section>
@@ -109,11 +113,6 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Joseph Groom | 
-            <a href="https://www.linkedin.com/in/joseph-groom-bme/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/Oupobopoc-C6H6" target="_blank">GitHub</a>
-        </p>
-    </footer>
+    <footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer>
 </body>
 </html>
