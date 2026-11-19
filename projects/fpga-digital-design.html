@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171a1d"><meta name="description" content="FPGA projects in VHDL on the Digilent Cmod A7, from RTL and finite-state machines to SPI control of an ST7789V TFT."><title>FPGA Digital Design & SPI Display | Joseph A. Groom</title><link rel="stylesheet" href="../assets/stylesheet.css"><link rel="icon" href="../assets/circuit-monogram.png"></head><body>
+<nav class="site-nav" aria-label="Main navigation"><a class="site-brand" href="../index.html"><img class="brand-logo" src="../assets/circuit-monogram.png" alt="" width="34" height="34"> Joseph A. Groom</a><div class="nav-links"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../projects.html" aria-current="page">Projects</a><a href="../resume.html">Resume</a><a href="../contact.html">Contact</a></div></nav>
+<main class="portfolio-case">
+<p class="eyebrow">DIGITAL HARDWARE · FPGA · VHDL</p>
+<h1>FPGA Digital Design &amp; SPI Display</h1>
+<p class="case-lead">Building and testing digital systems on an Artix-7 FPGA, from finite-state machines and arithmetic circuits to a custom SPI interface for a color TFT display.</p>
+<div class="tag-row"><span>Digilent Cmod A7-35T</span><span>Artix-7</span><span>VHDL</span><span>Vivado</span><span>SPI</span><span>ST7789V</span><span>RTL Simulation</span></div>
+<div class="case-highlight-grid">
+<div class="case-highlight"><strong>RTL design</strong><span>Combinational and sequential logic in VHDL</span></div>
+<div class="case-highlight"><strong>Simulation</strong><span>Behavioral verification using Vivado testbenches</span></div>
+<div class="case-highlight"><strong>Display interface</strong><span>SPI-driven 240 × 320 TFT development</span></div>
+</div>
+<section class="case-section"><h2>Project overview</h2>
+<p>This collection of FPGA work explores how digital behavior is described, simulated, synthesized, and brought out to physical hardware. I used the Digilent Cmod A7-35T development board to investigate clocked logic, finite-state machines, arithmetic datapaths, and peripheral interfaces.</p>
+<p>The latest hardware exercise is an ST7789V-based SPI display interface, with the immediate goal of drawing simple Pong-style paddles on the TFT. The initial display bring-up produced two bars successfully; orientation and screen coordinate mapping remain areas for further refinement.</p></section>
+<section class="case-section"><h2>SPI TFT display bring-up</h2>
+<div class="case-split"><div>
+<p>The screen exposes a serial data input and clock alongside control lines for chip select, data/command selection, reset, and backlight. I developed a VHDL-driven interface to send initialization and pixel commands to the controller.</p>
+<p>Rather than beginning with a full game engine, the test image uses two simple vertical or horizontal paddles to validate communication, drawing coordinates, and display orientation. This provides a small, observable hardware test before adding input handling and motion logic.</p>
+</div><div class="case-technical-panel"><div class="case-technical-heading">DISPLAY SIGNAL PATH</div><div class="case-block-flow"><span>VHDL State Machine</span><span>SPI Timing</span><span>ST7789V TFT</span></div><p>Clocked control logic → command/data transfers → pixel drawing</p></div></div>
+</section>
+<section class="case-section"><h2>Supporting digital design exercises</h2><div class="perifuse-grid">
+<div class="perifuse-panel"><h3>Four-bit ripple-carry adder</h3><p>Described arithmetic logic in VHDL and verified how carry propagates between bit stages using simulation.</p></div>
+<div class="perifuse-panel"><h3>Finite-state-machine design</h3><p>Built and tested state-based control logic, including a vending-machine controller with defined inputs, state transitions, and timeout behavior.</p></div>
+<div class="perifuse-panel"><h3>Clock and timing</h3><p>Worked with board constraints, clock division, and the relationship between synchronous RTL and hardware output timing.</p></div>
+<div class="perifuse-panel"><h3>Verification workflow</h3><p>Used simulation and on-board testing to compare expected state transitions and output behavior against actual implementation.</p></div>
+</div></section>
+<section class="case-section"><h2>Next steps</h2><p>The next iteration is to formalize display orientation settings, separate reusable SPI transport logic from the drawing controller, and move toward animated paddles and game-state logic. Hardware photographs, simulation waveforms, and a source repository can be added as they are organized for publication.</p></section>
+<p class="case-back"><a class="back-button" href="../projects.html">← Back to Projects</a></p></main><footer><p>&copy; 2026 Joseph A. Groom</p><div class="footer-links"><a href="https://www.linkedin.com/in/josephagroom/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Oupobopoc-C6H6" target="_blank" rel="noopener noreferrer">GitHub</a><a href="../contact.html">Contact</a></div></footer></body></html>
