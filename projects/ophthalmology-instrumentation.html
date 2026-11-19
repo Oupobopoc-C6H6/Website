@@ -22,7 +22,7 @@
 <main class="portfolio-case ophthalmic-case">
 <p class="eyebrow">UNIVERSITY OF SOUTH FLORIDA · OPHTHALMOLOGY RESEARCH</p>
 <h1>Ophthalmic Instrumentation &amp; Data Acquisition</h1>
-<p class="case-lead">Developing electronic measurement and Python desktop tools for experimental ocular fluid-flow and pressure studies, from sensor interfacing to live visualization and saved data.</p>
+<p class="case-lead">A portable, laptop-based acquisition system for ocular pressure and fluid-flow experiments at the vivarium, integrating sensor electronics with live visualization and local data recording.</p>
 <div class="tag-row"><span>Embedded C/C++</span><span>I²C</span><span>Analog Sensors</span><span>Serial Communication</span><span>Python / Tkinter</span><span>Matplotlib</span><span>CSV Logging</span></div>
 <p class="case-link-row"><a class="cta-button" href="https://github.com/Oupobopoc-C6H6/ophthalmic-instrumentation" target="_blank" rel="noopener noreferrer">View Firmware and GUI on GitHub ↗</a></p>
 <figure class="ophth-hero">
@@ -37,6 +37,11 @@
 <section class="case-section"><h2>Research application</h2>
 <p>In the USF ophthalmology research laboratory, I worked on instrumentation supporting experimental measurements of intraocular pressure and ocular fluid flow. My contributions focused on the embedded acquisition and desktop software needed to read sensors, monitor signals as experiments progressed, and preserve the time-series data for later review.</p>
 <p>The system was developed for experimental research, not as a clinical diagnostic or patient-monitoring instrument. Accurate sensor configuration, calibration, timing, and interpretation of channel units depend on the connected hardware.</p></section>
+<section class="case-section"><h2>Design requirement: Research at the vivarium</h2>
+<p>The measurement setup needed to support experiments directly at the university's vivarium rather than depend on a fixed workstation in the ophthalmology laboratory. Under the research project's animal-handling procedures, transporting the rats to the laboratory meant they had to be euthanized that day, creating a significant constraint on where the measurements could take place.</p>
+<p>I developed the acquisition software to run locally on a portable Windows laptop connected to the instrumentation. The Python/Tkinter desktop application gave researchers live flow and pressure plots, serial-port controls, and timestamped data recording while working at the experimental site.</p>
+<p>This was a practical engineering requirement, not just a software deployment preference: the electronics and laptop together needed to support on-site experimental workflows without requiring researchers to bring the animals to a separate laboratory for data collection.</p>
+</section>
 <section class="case-section"><h2>Single-controller acquisition</h2>
 <div class="case-split">
 <div>
